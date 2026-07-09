@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <CSRG_ModName>Configurable Shield &amp; Regeneration Genes</CSRG_ModName>
+  <CSRG.ShieldSettings>Shield Settings</CSRG.ShieldSettings>
+  <CSRG.ShieldMaxEnergy>Max Energy</CSRG.ShieldMaxEnergy>
+  <CSRG.ShieldMaxEnergyTip>Maximum shield energy capacity</CSRG.ShieldMaxEnergyTip>
+  <CSRG.ShieldRegenRate>Regen Rate</CSRG.ShieldRegenRate>
+  <CSRG.ShieldRegenRateTip>Energy regenerated per tick</CSRG.ShieldRegenRateTip>
+  <CSRG.ShieldBreakCooldown>Break Cooldown</CSRG.ShieldBreakCooldown>
+  <CSRG.ShieldBreakCooldownTip>Ticks before shield starts recharging after breaking</CSRG.ShieldBreakCooldownTip>
+  <CSRG.ShieldEnergyOnReset>Energy On Reset</CSRG.ShieldEnergyOnReset>
+  <CSRG.ShieldEnergyOnResetTip>Percentage of max energy restored when shield resets</CSRG.ShieldEnergyOnResetTip>
+  <CSRG.EnergyLossPerDamage>Energy Loss Per Damage</CSRG.EnergyLossPerDamage>
+  <CSRG.EnergyLossPerDamageTip>Energy consumed per point of incoming damage</CSRG.EnergyLossPerDamageTip>
+  <CSRG.ResetToDefaults>Reset to Defaults</CSRG.ResetToDefaults>
+</LanguageData>

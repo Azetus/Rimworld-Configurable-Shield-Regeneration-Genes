@@ -16,6 +16,11 @@ public class ConfigurableShieldRegenerationGenes : Mod
         new Harmony("Aliza.ConfigurableShieldRegenerationGenes").PatchAll();
     }
 
+    public override string SettingsCategory()
+    {
+        return "CSRG_ModName".Translate();
+    }
+
     public override void DoSettingsWindowContents(Rect inRect)
     {
         base.DoSettingsWindowContents(inRect);

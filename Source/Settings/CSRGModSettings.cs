@@ -2,15 +2,21 @@
 
 namespace CSRG_ConfigurableShieldRegenerationGenes.Settings;
 
-public class CSRGModSettings:ModSettings
+public class CSRGModSettings : ModSettings
 {
+    public float shieldMaxEnergy = 100f;
+    public float shieldRegenPerTick = 0.1f;
+    public float shieldBreakCooldown = 300f;
+    public float shieldEnergyOnReset = 0.2f;
+    public float energyLossPerDamage = 0.033f;
+
     public override void ExposeData()
     {
         base.ExposeData();
-    }
-
-    public void ResetSettings()
-    {
-        
+        Scribe_Values.Look(ref shieldMaxEnergy, nameof(shieldMaxEnergy), 100f);
+        Scribe_Values.Look(ref shieldRegenPerTick, nameof(shieldRegenPerTick), 0.1f);
+        Scribe_Values.Look(ref shieldBreakCooldown, nameof(shieldBreakCooldown), 300f);
+        Scribe_Values.Look(ref shieldEnergyOnReset, nameof(shieldEnergyOnReset), 0.2f);
+        Scribe_Values.Look(ref energyLossPerDamage, nameof(energyLossPerDamage), 0.033f);
     }
 }

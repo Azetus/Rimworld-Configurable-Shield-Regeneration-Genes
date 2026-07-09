@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <CSRG_ShieldGene.label>nanomechanical shield</CSRG_ShieldGene.label>
+  <CSRG_ShieldGene.description>Carriers of this gene have special archite nanomachines within their cells. These nanomachines generate an energy shield on the carrier's surface, absorbing incoming damage and recharging over time. When broken, requires a cooldown period before reactivation.</CSRG_ShieldGene.description>
+</LanguageData>

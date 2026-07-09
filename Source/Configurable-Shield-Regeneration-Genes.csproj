@@ -15,5 +15,12 @@
     <ItemGroup>
         <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" />
         <PackageReference Include="Lib.Harmony.Ref" Version="2.4.2" />
+        <PackageReference Include="Krafs.Publicizer" Version="2.3.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <Publicize Include="Assembly-CSharp" />
     </ItemGroup>
 </Project>
