@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
   <CSRG.ShieldGeneTip>基因护盾状态</CSRG.ShieldGeneTip>
+  <CSRG.RegenerationSettings>再生设置</CSRG.RegenerationSettings>
+  <CSRG.RegenHealInterval>愈合间隔 (ticks)</CSRG.RegenHealInterval>
+  <CSRG.RegenHealIntervalTip>每次伤口愈合脉冲之间的间隔</CSRG.RegenHealIntervalTip>
+  <CSRG.RegenRegrowInterval>肢体再生间隔 (ticks)</CSRG.RegenRegrowInterval>
+  <CSRG.RegenRegrowIntervalTip>每次疤痕/肢体再生脉冲之间的间隔</CSRG.RegenRegrowIntervalTip>
+  <CSRG.RegenHealAmount>愈合量</CSRG.RegenHealAmount>
+  <CSRG.RegenHealAmountTip>每次脉冲愈合的伤口严重度</CSRG.RegenHealAmountTip>
+  <CSRG.RegenCanHealScars>治愈疤痕</CSRG.RegenCanHealScars>
+  <CSRG.RegenCanHealScarsTip>是否允许治愈永久伤和慢性疾病</CSRG.RegenCanHealScarsTip>
+  <CSRG.RegenCanHealLimbs>再生肢体</CSRG.RegenCanHealLimbs>
+  <CSRG.RegenCanHealLimbsTip>是否允许重新生长缺失的身体部位</CSRG.RegenCanHealLimbsTip>
 </LanguageData>
