@@ -60,6 +60,7 @@ public class CSRG_ShieldGene : Gene
     {
         absorbed = false;
         if (ShieldState != ShieldState.Active) return;
+        if (dinfo.Def == DamageDefOf.SurgicalCut || dinfo.Def == DamageDefOf.Extinguish) return;
 
         energy -= dinfo.Amount * LossMultiplier;
         if (energy < 0f)
