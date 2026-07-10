@@ -71,7 +71,7 @@ public class CSRG_ShieldGene : Gene
 
     private void Break()
     {
-        if (pawn.Spawned)
+        if (pawn != null && pawn.Spawned)
         {
             float scale = Mathf.Lerp(MinDrawSize, MaxDrawSize, Mathf.Max(0f, energy));
             EffecterDefOf.Shield_Break.SpawnAttached(pawn, pawn.MapHeld, scale);
@@ -94,6 +94,7 @@ public class CSRG_ShieldGene : Gene
 
     private void AbsorbedDamage(DamageInfo dinfo)
     {
+        if (pawn == null || !pawn.Spawned) return;
         SoundDefOf.EnergyShield_AbsorbDamage.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
         impactAngleVect = Vector3Utility.HorizontalVectorFromAngle(dinfo.Angle);
         Vector3 loc = pawn.TrueCenter() + impactAngleVect.RotatedBy(180f) * 0.5f;
