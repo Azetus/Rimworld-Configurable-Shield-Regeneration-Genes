@@ -8,7 +8,7 @@ public class CSRGModSettings : ModSettings
     public float shieldRegenPerTick = 0.1f;
     public float shieldBreakCooldown = 300f;
     public float shieldEnergyOnReset = 0.2f;
-    public float energyLossPerDamage = 0.033f;
+    public float energyLossPerDamage = 1.0f;
 
     public override void ExposeData()
     {
@@ -17,6 +17,15 @@ public class CSRGModSettings : ModSettings
         Scribe_Values.Look(ref shieldRegenPerTick, nameof(shieldRegenPerTick), 0.1f);
         Scribe_Values.Look(ref shieldBreakCooldown, nameof(shieldBreakCooldown), 300f);
         Scribe_Values.Look(ref shieldEnergyOnReset, nameof(shieldEnergyOnReset), 0.2f);
-        Scribe_Values.Look(ref energyLossPerDamage, nameof(energyLossPerDamage), 0.033f);
+        Scribe_Values.Look(ref energyLossPerDamage, nameof(energyLossPerDamage), 1.0f);
+    }
+
+    public void ResetSettings()
+    {
+        shieldMaxEnergy = 100f;
+        shieldRegenPerTick = 0.1f;
+        shieldBreakCooldown = 300f;
+        shieldEnergyOnReset = 0.2f;
+        energyLossPerDamage = 1.0f;
     }
 }
