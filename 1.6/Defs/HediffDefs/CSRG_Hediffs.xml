@@ -3,18 +3,39 @@
   <HediffDef>
     <defName>CSRG_RegeneratingInjury</defName>
     <label>regenerating tissue</label>
+    <description>Newly grown tissue that is still developing. It will mature and regain full functionality over time.</description>
     <hediffClass>CSRG_ConfigurableShieldRegenerationGenes.Genes.Hediff_RegeneratingInjury</hediffClass>
     <isBad>true</isBad>
-    <tendable>true</tendable>
-    <displayWound>false</displayWound>
-    <injuryProps>
-      <painPerSeverity>0</painPerSeverity>
-      <canMerge>false</canMerge>
-    </injuryProps>
+    <stages>
+      <li>
+        <minSeverity>0.0</minSeverity>
+        <partEfficiencyOffset>0.0</partEfficiencyOffset>
+        <label>fully restored</label>
+      </li>
+      <li>
+        <minSeverity>0.2</minSeverity>
+        <partEfficiencyOffset>-0.2</partEfficiencyOffset>
+        <label>nearly healed</label>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <partEfficiencyOffset>-0.4</partEfficiencyOffset>
+        <label>maturing</label>
+      </li>
+      <li>
+        <minSeverity>0.6</minSeverity>
+        <partEfficiencyOffset>-0.6</partEfficiencyOffset>
+        <label>developing</label>
+      </li>
+      <li>
+        <minSeverity>0.8</minSeverity>
+        <partEfficiencyOffset>-0.8</partEfficiencyOffset>
+        <label>nascent</label>
+      </li>
+    </stages>
     <comps>
-      <li Class="HediffCompProperties_TendDuration">
-        <labelTendedWell>regenerating</labelTendedWell>
-        <labelTendedWellInner>regenerating</labelTendedWellInner>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.2</severityPerDay>
       </li>
     </comps>
   </HediffDef>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
   <CSRG_RegeneratingInjury.label>regenerating tissue</CSRG_RegeneratingInjury.label>
+  <CSRG_RegeneratingInjury.description>Newly grown tissue that is still developing. It will mature and regain full functionality over time.</CSRG_RegeneratingInjury.description>
 </LanguageData>

@@ -70,15 +70,25 @@ public class CSRG_RegenerativeGene : Gene
 
     private bool HealRegeneratingWounds(ref float pool)
     {
-        var candidates = new List<Hediff_Injury>();
+        var candidates = new List<Hediff_RegeneratingInjury>();
         foreach (var h in pawn.health.hediffSet.hediffs)
         {
-            if (h is Hediff_RegeneratingInjury injury
-                && injury.CanHealNaturally())
-                candidates.Add(injury);
+            if (h is Hediff_RegeneratingInjury regenInjury)
+                candidates.Add(regenInjury);
         }
 
-        return ConsumePool(candidates, ref pool);
+        if (candidates.Count == 0 || pool <= 0f) return false;
+
+        foreach (var regenInjury in candidates)
+        {
+            float heal = Mathf.Min(pool, regenInjury.Severity);
+            regenInjury.Severity -= heal;
+            pool -= heal;
+            if (pool <= 0f) break;
+        }
+
+        pawn.health.Notify_HediffChanged(candidates[candidates.Count - 1]);
+        return true;
     }
 
     private bool ConsumePool(List<Hediff_Injury> candidates, ref float pool)

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
   <CSRG_RegeneratingInjury.label>再生组织</CSRG_RegeneratingInjury.label>
+  <CSRG_RegeneratingInjury.description>新生的组织仍在发育中。随着时间推移，它将成熟并恢复全部功能。</CSRG_RegeneratingInjury.description>
 </LanguageData>
