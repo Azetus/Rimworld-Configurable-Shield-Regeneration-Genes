@@ -18,8 +18,8 @@
   <CSRG.BurstPoolMultiplier>爆发池倍率</CSRG.BurstPoolMultiplier>
   <CSRG.BurstPoolMultiplierTip>爆发状态期间治疗池的倍率</CSRG.BurstPoolMultiplierTip>
   <CSRG.LongTermRegen>长期再生</CSRG.LongTermRegen>
-  <CSRG.ScarInterval>疤痕间隔 (ticks)</CSRG.ScarInterval>
-  <CSRG.ScarIntervalTip>永久伤疤愈合尝试之间的间隔</CSRG.ScarIntervalTip>
-  <CSRG.LimbInterval>肢体间隔 (ticks)</CSRG.LimbInterval>
-  <CSRG.LimbIntervalTip>缺失肢体再生尝试之间的间隔</CSRG.LimbIntervalTip>
+  <CSRG.ScarInterval>疤痕间隔 (days)</CSRG.ScarInterval>
+  <CSRG.ScarIntervalTip>永久伤疤愈合尝试之间的天数间隔</CSRG.ScarIntervalTip>
+  <CSRG.LimbInterval>肢体间隔 (days)</CSRG.LimbInterval>
+  <CSRG.LimbIntervalTip>缺失肢体再生尝试之间的天数间隔</CSRG.LimbIntervalTip>
 </LanguageData>

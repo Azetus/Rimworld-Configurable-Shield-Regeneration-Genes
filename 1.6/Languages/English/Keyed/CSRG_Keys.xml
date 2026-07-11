@@ -18,8 +18,8 @@
   <CSRG.BurstPoolMultiplier>Burst Pool Multiplier</CSRG.BurstPoolMultiplier>
   <CSRG.BurstPoolMultiplierTip>Heal pool multiplier applied during burst state</CSRG.BurstPoolMultiplierTip>
   <CSRG.LongTermRegen>Long-Term Regeneration</CSRG.LongTermRegen>
-  <CSRG.ScarInterval>Scar Interval (ticks)</CSRG.ScarInterval>
-  <CSRG.ScarIntervalTip>Ticks between permanent scar healing attempts</CSRG.ScarIntervalTip>
-  <CSRG.LimbInterval>Limb Interval (ticks)</CSRG.LimbInterval>
-  <CSRG.LimbIntervalTip>Ticks between missing limb regeneration attempts</CSRG.LimbIntervalTip>
+  <CSRG.ScarInterval>Scar Interval (days)</CSRG.ScarInterval>
+  <CSRG.ScarIntervalTip>Days between permanent scar healing attempts</CSRG.ScarIntervalTip>
+  <CSRG.LimbInterval>Limb Interval (days)</CSRG.LimbInterval>
+  <CSRG.LimbIntervalTip>Days between missing limb regeneration attempts</CSRG.LimbIntervalTip>
 </LanguageData>

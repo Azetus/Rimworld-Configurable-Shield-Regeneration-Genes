@@ -16,8 +16,8 @@ public class CSRGModSettings : ModSettings
     public float regenBurstDuration = 1800f;
     public float regenBurstCooldown = 60000f;
     public float regenBurstPoolMultiplier = 3f;
-    public float regenScarInterval = 900000f;
-    public float regenLimbInterval = 900000f;
+    public float regenScarInterval = 15f;
+    public float regenLimbInterval = 15f;
 
     public override void ExposeData()
     {
@@ -34,8 +34,8 @@ public class CSRGModSettings : ModSettings
         Scribe_Values.Look(ref regenBurstDuration, nameof(regenBurstDuration), 1800f);
         Scribe_Values.Look(ref regenBurstCooldown, nameof(regenBurstCooldown), 60000f);
         Scribe_Values.Look(ref regenBurstPoolMultiplier, nameof(regenBurstPoolMultiplier), 3f);
-        Scribe_Values.Look(ref regenScarInterval, nameof(regenScarInterval), 900000f);
-        Scribe_Values.Look(ref regenLimbInterval, nameof(regenLimbInterval), 900000f);
+        Scribe_Values.Look(ref regenScarInterval, nameof(regenScarInterval), 15f);
+        Scribe_Values.Look(ref regenLimbInterval, nameof(regenLimbInterval), 15f);
     }
 
     public void ResetSettings()
@@ -52,7 +52,7 @@ public class CSRGModSettings : ModSettings
         regenBurstDuration = 1800f;
         regenBurstCooldown = 60000f;
         regenBurstPoolMultiplier = 3f;
-        regenScarInterval = 900000f;
-        regenLimbInterval = 900000f;
+        regenScarInterval = 15f;
+        regenLimbInterval = 15f;
     }
 }

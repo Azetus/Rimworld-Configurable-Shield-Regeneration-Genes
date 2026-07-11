@@ -13,8 +13,8 @@ public class CSRG_RegenerativeGene : Gene
     private int BurstInterval => (int)ConfigurableShieldRegenerationGenes.settings.regenBurstInterval;
     private int BurstDuration => (int)ConfigurableShieldRegenerationGenes.settings.regenBurstDuration;
     private float BurstMultiplier => ConfigurableShieldRegenerationGenes.settings.regenBurstPoolMultiplier;
-    private int ScarInterval => (int)ConfigurableShieldRegenerationGenes.settings.regenScarInterval;
-    private int LimbInterval => (int)ConfigurableShieldRegenerationGenes.settings.regenLimbInterval;
+    private int ScarInterval => (int)(ConfigurableShieldRegenerationGenes.settings.regenScarInterval * 60000f);
+    private int LimbInterval => (int)(ConfigurableShieldRegenerationGenes.settings.regenLimbInterval * 60000f);
 
     public override void Tick()
     {
