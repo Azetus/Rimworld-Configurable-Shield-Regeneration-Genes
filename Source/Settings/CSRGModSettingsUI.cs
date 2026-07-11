@@ -43,23 +43,15 @@ public static class CSRGModSettingsUI
 
         CSRGSliderInput.SliderWithInput(listing,
             "CSRG.RegenHealInterval".Translate() + " ticks", ref s.regenHealInterval,
-            1f, 72000f, "CSRG.RegenHealIntervalTip".Translate());
-
-        CSRGSliderInput.SliderWithInput(listing,
-            "CSRG.RegenRegrowInterval".Translate() + " ticks", ref s.regenRegrowInterval,
-            1f, 3600000f, "CSRG.RegenRegrowIntervalTip".Translate());
+            15f, 72000f, "CSRG.RegenHealIntervalTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
             "CSRG.RegenHealAmount".Translate(), ref s.regenHealAmount,
-            0.1f, 100f, "CSRG.RegenHealAmountTip".Translate());
+            1f, 100f, "CSRG.RegenHealAmountTip".Translate());
 
-        listing.CheckboxLabeled(
-            "CSRG.RegenCanHealScars".Translate(), ref s.regenCanHealScars,
-            "CSRG.RegenCanHealScarsTip".Translate());
-
-        listing.CheckboxLabeled(
-            "CSRG.RegenCanHealLimbs".Translate(), ref s.regenCanHealLimbs,
-            "CSRG.RegenCanHealLimbsTip".Translate());
+        CSRGSliderInput.SliderWithInput(listing,
+            "CSRG.RegenSeverityPercent".Translate(), ref s.regenRegeneratingSeverityPercent,
+            0.1f, 0.95f, "CSRG.RegenSeverityPercentTip".Translate());
 
         listing.Gap();
         if (listing.ButtonText("CSRG.ResetToDefaults".Translate()))

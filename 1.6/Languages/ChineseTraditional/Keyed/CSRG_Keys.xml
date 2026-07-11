@@ -3,13 +3,9 @@
   <CSRG.ShieldGeneTip>基因護盾狀態</CSRG.ShieldGeneTip>
   <CSRG.RegenerationSettings>再生設置</CSRG.RegenerationSettings>
   <CSRG.RegenHealInterval>癒合間隔 (ticks)</CSRG.RegenHealInterval>
-  <CSRG.RegenHealIntervalTip>每次傷口癒合脈衝之間的間隔</CSRG.RegenHealIntervalTip>
-  <CSRG.RegenRegrowInterval>肢體再生間隔 (ticks)</CSRG.RegenRegrowInterval>
-  <CSRG.RegenRegrowIntervalTip>每次疤痕/肢體再生脈衝之間的間隔</CSRG.RegenRegrowIntervalTip>
-  <CSRG.RegenHealAmount>癒合量</CSRG.RegenHealAmount>
-  <CSRG.RegenHealAmountTip>每次脈衝癒合的傷口嚴重度</CSRG.RegenHealAmountTip>
-  <CSRG.RegenCanHealScars>治癒疤痕</CSRG.RegenCanHealScars>
-  <CSRG.RegenCanHealScarsTip>是否允許治癒永久傷和慢性疾病</CSRG.RegenCanHealScarsTip>
-  <CSRG.RegenCanHealLimbs>再生肢體</CSRG.RegenCanHealLimbs>
-  <CSRG.RegenCanHealLimbsTip>是否允許重新生長缺失的身體部位</CSRG.RegenCanHealLimbsTip>
+  <CSRG.RegenHealIntervalTip>每次再生脈衝之間的間隔</CSRG.RegenHealIntervalTip>
+  <CSRG.RegenHealAmount>治療池</CSRG.RegenHealAmount>
+  <CSRG.RegenHealAmountTip>每脈衝總治療預算</CSRG.RegenHealAmountTip>
+  <CSRG.RegenSeverityPercent>新生肢體嚴重度 %</CSRG.RegenSeverityPercent>
+  <CSRG.RegenSeverityPercentTip>再生肢體傷口的初始嚴重度，以最大血量百分比表示</CSRG.RegenSeverityPercentTip>
 </LanguageData>

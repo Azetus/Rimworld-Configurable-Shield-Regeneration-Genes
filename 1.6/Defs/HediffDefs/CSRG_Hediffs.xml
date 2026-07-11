@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>CSRG_RegeneratingInjury</defName>
+    <label>regenerating tissue</label>
+    <hediffClass>CSRG_ConfigurableShieldRegenerationGenes.Genes.Hediff_RegeneratingInjury</hediffClass>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <displayWound>false</displayWound>
+    <injuryProps>
+      <painPerSeverity>0</painPerSeverity>
+      <canMerge>false</canMerge>
+    </injuryProps>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>regenerating</labelTendedWell>
+        <labelTendedWellInner>regenerating</labelTendedWellInner>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

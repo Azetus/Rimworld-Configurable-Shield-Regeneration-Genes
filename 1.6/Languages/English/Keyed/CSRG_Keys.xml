@@ -3,13 +3,9 @@
   <CSRG.ShieldGeneTip>Gene shield status</CSRG.ShieldGeneTip>
   <CSRG.RegenerationSettings>Regeneration Settings</CSRG.RegenerationSettings>
   <CSRG.RegenHealInterval>Heal Interval (ticks)</CSRG.RegenHealInterval>
-  <CSRG.RegenHealIntervalTip>Ticks between each wound-healing pulse</CSRG.RegenHealIntervalTip>
-  <CSRG.RegenRegrowInterval>Regrow Interval (ticks)</CSRG.RegenRegrowInterval>
-  <CSRG.RegenRegrowIntervalTip>Ticks between each scar/limb regeneration pulse</CSRG.RegenRegrowIntervalTip>
-  <CSRG.RegenHealAmount>Heal Amount</CSRG.RegenHealAmount>
-  <CSRG.RegenHealAmountTip>Wound severity healed per pulse</CSRG.RegenHealAmountTip>
-  <CSRG.RegenCanHealScars>Heal Scars</CSRG.RegenCanHealScars>
-  <CSRG.RegenCanHealScarsTip>Whether permanent injuries and chronic illnesses can be healed</CSRG.RegenCanHealScarsTip>
-  <CSRG.RegenCanHealLimbs>Regenerate Limbs</CSRG.RegenCanHealLimbs>
-  <CSRG.RegenCanHealLimbsTip>Whether missing body parts can be regrown</CSRG.RegenCanHealLimbsTip>
+  <CSRG.RegenHealIntervalTip>Ticks between each regeneration pulse</CSRG.RegenHealIntervalTip>
+  <CSRG.RegenHealAmount>Heal Pool</CSRG.RegenHealAmount>
+  <CSRG.RegenHealAmountTip>Total HP budget per regeneration pulse</CSRG.RegenHealAmountTip>
+  <CSRG.RegenSeverityPercent>Newborn Severity %</CSRG.RegenSeverityPercent>
+  <CSRG.RegenSeverityPercentTip>Initial severity of regenerated limb wounds as percentage of max health</CSRG.RegenSeverityPercentTip>
 </LanguageData>
