@@ -8,4 +8,18 @@
   <CSRG.RegenHealAmountTip>Total HP budget per regeneration pulse</CSRG.RegenHealAmountTip>
   <CSRG.RegenSeverityPercent>Newborn Severity %</CSRG.RegenSeverityPercent>
   <CSRG.RegenSeverityPercentTip>Initial severity of regenerated limb wounds as percentage of max health</CSRG.RegenSeverityPercentTip>
+  <CSRG.BurstSettings>Burst Regeneration Settings</CSRG.BurstSettings>
+  <CSRG.BurstInterval>Burst Interval (ticks)</CSRG.BurstInterval>
+  <CSRG.BurstIntervalTip>Ticks between each healing pulse during burst</CSRG.BurstIntervalTip>
+  <CSRG.BurstDuration>Burst Duration (ticks)</CSRG.BurstDuration>
+  <CSRG.BurstDurationTip>Total duration of the burst regeneration state</CSRG.BurstDurationTip>
+  <CSRG.BurstCooldown>Burst Cooldown (ticks)</CSRG.BurstCooldown>
+  <CSRG.BurstCooldownTip>Cooldown before burst can be triggered again</CSRG.BurstCooldownTip>
+  <CSRG.BurstPoolMultiplier>Burst Pool Multiplier</CSRG.BurstPoolMultiplier>
+  <CSRG.BurstPoolMultiplierTip>Heal pool multiplier applied during burst state</CSRG.BurstPoolMultiplierTip>
+  <CSRG.LongTermRegen>Long-Term Regeneration</CSRG.LongTermRegen>
+  <CSRG.ScarInterval>Scar Interval (ticks)</CSRG.ScarInterval>
+  <CSRG.ScarIntervalTip>Ticks between permanent scar healing attempts</CSRG.ScarIntervalTip>
+  <CSRG.LimbInterval>Limb Interval (ticks)</CSRG.LimbInterval>
+  <CSRG.LimbIntervalTip>Ticks between missing limb regeneration attempts</CSRG.LimbIntervalTip>
 </LanguageData>

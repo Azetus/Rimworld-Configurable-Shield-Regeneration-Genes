@@ -2,4 +2,9 @@
 <LanguageData>
   <CSRG_RegeneratingInjury.label>regenerating tissue</CSRG_RegeneratingInjury.label>
   <CSRG_RegeneratingInjury.description>Newly grown tissue that is still developing. It will mature and regain full functionality over time.</CSRG_RegeneratingInjury.description>
+  <CSRG_RegeneratingInjury.stage.0.label>fully restored</CSRG_RegeneratingInjury.stage.0.label>
+  <CSRG_RegeneratingInjury.stage.1.label>nearly healed</CSRG_RegeneratingInjury.stage.1.label>
+  <CSRG_RegeneratingInjury.stage.2.label>maturing</CSRG_RegeneratingInjury.stage.2.label>
+  <CSRG_RegeneratingInjury.stage.3.label>developing</CSRG_RegeneratingInjury.stage.3.label>
+  <CSRG_RegeneratingInjury.stage.4.label>nascent</CSRG_RegeneratingInjury.stage.4.label>
 </LanguageData>

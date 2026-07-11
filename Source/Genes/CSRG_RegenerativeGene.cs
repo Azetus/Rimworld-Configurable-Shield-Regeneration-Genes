@@ -10,46 +10,76 @@ public class CSRG_RegenerativeGene : Gene
     private int HealInterval => (int)ConfigurableShieldRegenerationGenes.settings.regenHealInterval;
     private float HealAmount => ConfigurableShieldRegenerationGenes.settings.regenHealAmount;
     private float SeverityPercent => ConfigurableShieldRegenerationGenes.settings.regenRegeneratingSeverityPercent;
+    private int BurstInterval => (int)ConfigurableShieldRegenerationGenes.settings.regenBurstInterval;
+    private int BurstDuration => (int)ConfigurableShieldRegenerationGenes.settings.regenBurstDuration;
+    private float BurstMultiplier => ConfigurableShieldRegenerationGenes.settings.regenBurstPoolMultiplier;
+    private int ScarInterval => (int)ConfigurableShieldRegenerationGenes.settings.regenScarInterval;
+    private int LimbInterval => (int)ConfigurableShieldRegenerationGenes.settings.regenLimbInterval;
 
     public override void Tick()
     {
         base.Tick();
-        if (pawn != null && pawn.IsHashIntervalTick(HealInterval))
-            RegenerationPulse();
-    }
 
-    private void RegenerationPulse()
-    {
-        float pool = HealAmount;
-        bool consumed = false;
+        var burst = pawn.health.hediffSet
+            .GetFirstHediffOfDef(CSRG_DefOf.CSRG_RegenerationBurst)
+            as Hediff_RegenerationBurst;
 
-        consumed |= HealBleedingWounds(ref pool);
-        consumed |= HealNormalWounds(ref pool);
-        consumed |= HealRegeneratingWounds(ref pool);
+        if (burst == null || burst.inCooldown)
+        {
+            if (pawn.IsHashIntervalTick(HealInterval))
+                RegenerationPulse(healRegenerating: true, poolMultiplier: 1f);
+        }
 
-        RestoreBloodLoss();
+        if (burst == null
+            && pawn.health.summaryHealth.SummaryHealthPercent < 0.85f
+            && pawn.health.hediffSet.HasNaturallyHealingInjury())
+        {
+            var h = (Hediff_RegenerationBurst)HediffMaker.MakeHediff(
+                CSRG_DefOf.CSRG_RegenerationBurst, pawn);
+            h.InitBurst(BurstDuration);
+            pawn.health.AddHediff(h);
+        }
+        else if (burst != null && !burst.inCooldown
+            && pawn.IsHashIntervalTick(BurstInterval))
+        {
+            RegenerationPulse(healRegenerating: false, poolMultiplier: BurstMultiplier);
+        }
 
-        if (consumed && pool > 0f)
+        if (pawn.IsHashIntervalTick(ScarInterval))
             HediffComp_HealPermanentWounds.TryHealRandomPermanentWound(pawn, LabelCap);
 
-        if (!consumed)
+        if (pawn.IsHashIntervalTick(LimbInterval))
             RegenerateLimb();
     }
 
-    private bool HealBleedingWounds(ref float pool)
+    private void RegenerationPulse(bool healRegenerating, float poolMultiplier)
     {
-        var candidates = new List<Hediff_Injury>();
+        float pool = HealAmount * poolMultiplier;
+
+        TendWounds();
+        HealNormalWounds(ref pool);
+        if (healRegenerating)
+            HealRegeneratingWounds(ref pool);
+
+        RestoreBloodLoss();
+    }
+
+    private void TendWounds()
+    {
+        Hediff? tendTarget = null;
+        float maxPriority = 0f;
+
         foreach (var h in pawn.health.hediffSet.hediffs)
         {
-            if (h is Hediff_Injury injury
-                && !(h is Hediff_RegeneratingInjury)
-                && !injury.IsPermanent()
-                && injury.BleedRate > 0f)
-                candidates.Add(injury);
+            if (h.TendableNow() && h.TendPriority > maxPriority)
+            {
+                maxPriority = h.TendPriority;
+                tendTarget = h;
+            }
         }
 
-        candidates.Sort((a, b) => b.BleedRate.CompareTo(a.BleedRate));
-        return ConsumePool(candidates, ref pool);
+        if (tendTarget != null)
+            tendTarget.Tended(1f, 1f, 0);
     }
 
     private bool HealNormalWounds(ref float pool)
@@ -60,8 +90,7 @@ public class CSRG_RegenerativeGene : Gene
             if (h is Hediff_Injury injury
                 && !(h is Hediff_RegeneratingInjury)
                 && injury.CanHealNaturally()
-                && !injury.IsPermanent()
-                && injury.BleedRate <= 0f)
+                && !injury.IsPermanent())
                 candidates.Add(injury);
         }
 
@@ -129,7 +158,7 @@ public class CSRG_RegenerativeGene : Gene
             float severity = Mathf.Min(SeverityPercent * maxHealth, maxHealth - 1f);
 
             var newborn = (Hediff_RegeneratingInjury)HediffMaker.MakeHediff(
-                HediffDef.Named("CSRG_RegeneratingInjury"), pawn, part);
+                CSRG_DefOf.CSRG_RegeneratingInjury, pawn, part);
             newborn.Severity = severity;
             pawn.health.AddHediff(newborn);
             return;

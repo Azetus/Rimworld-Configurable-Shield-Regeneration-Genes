@@ -5,11 +5,18 @@ namespace CSRG_ConfigurableShieldRegenerationGenes.Settings;
 
 public static class CSRGModSettingsUI
 {
+    private static Vector2 scrollPosition;
+
     public static void SettingsWindowContents(Rect inRect)
     {
         var s = ConfigurableShieldRegenerationGenes.settings;
+
+        float contentHeight = 1000f;
+        Rect viewRect = new Rect(0f, 0f, inRect.width - 16f, contentHeight);
+        Widgets.BeginScrollView(inRect, ref scrollPosition, viewRect);
+
         var listing = new Listing_Standard();
-        listing.Begin(inRect);
+        listing.Begin(viewRect);
 
         listing.Label("CSRG.ShieldSettings".Translate());
         listing.Gap();
@@ -54,9 +61,46 @@ public static class CSRGModSettingsUI
             0.1f, 0.95f, "CSRG.RegenSeverityPercentTip".Translate());
 
         listing.Gap();
+        listing.GapLine(12f);
+        listing.Label("CSRG.BurstSettings".Translate());
+        listing.Gap();
+        listing.GapLine(12f);
+
+        CSRGSliderInput.SliderWithInput(listing,
+            "CSRG.BurstInterval".Translate() + " ticks", ref s.regenBurstInterval,
+            10f, 150f, "CSRG.BurstIntervalTip".Translate());
+
+        CSRGSliderInput.SliderWithInput(listing,
+            "CSRG.BurstDuration".Translate() + " ticks", ref s.regenBurstDuration,
+            60f, 7200f, "CSRG.BurstDurationTip".Translate());
+
+        CSRGSliderInput.SliderWithInput(listing,
+            "CSRG.BurstCooldown".Translate() + " ticks", ref s.regenBurstCooldown,
+            6000f, 3600000f, "CSRG.BurstCooldownTip".Translate());
+
+        CSRGSliderInput.SliderWithInput(listing,
+            "CSRG.BurstPoolMultiplier".Translate(), ref s.regenBurstPoolMultiplier,
+            1f, 10f, "CSRG.BurstPoolMultiplierTip".Translate());
+
+        listing.Gap();
+        listing.GapLine(12f);
+        listing.Label("CSRG.LongTermRegen".Translate());
+        listing.Gap();
+        listing.GapLine(12f);
+
+        CSRGSliderInput.SliderWithInput(listing,
+            "CSRG.ScarInterval".Translate() + " ticks", ref s.regenScarInterval,
+            60000f, 3600000f, "CSRG.ScarIntervalTip".Translate());
+
+        CSRGSliderInput.SliderWithInput(listing,
+            "CSRG.LimbInterval".Translate() + " ticks", ref s.regenLimbInterval,
+            60000f, 3600000f, "CSRG.LimbIntervalTip".Translate());
+
+        listing.Gap();
         if (listing.ButtonText("CSRG.ResetToDefaults".Translate()))
             s.ResetSettings();
 
         listing.End();
+        Widgets.EndScrollView();
     }
 }

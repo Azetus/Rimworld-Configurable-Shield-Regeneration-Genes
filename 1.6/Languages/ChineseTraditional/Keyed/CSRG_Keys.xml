@@ -8,4 +8,18 @@
   <CSRG.RegenHealAmountTip>每脈衝總治療預算</CSRG.RegenHealAmountTip>
   <CSRG.RegenSeverityPercent>新生肢體嚴重度 %</CSRG.RegenSeverityPercent>
   <CSRG.RegenSeverityPercentTip>再生肢體傷口的初始嚴重度，以最大血量百分比表示</CSRG.RegenSeverityPercentTip>
+  <CSRG.BurstSettings>爆發再生設置</CSRG.BurstSettings>
+  <CSRG.BurstInterval>爆發間隔 (ticks)</CSRG.BurstInterval>
+  <CSRG.BurstIntervalTip>爆發期間每次癒合脈衝之間的間隔</CSRG.BurstIntervalTip>
+  <CSRG.BurstDuration>爆發持續 (ticks)</CSRG.BurstDuration>
+  <CSRG.BurstDurationTip>爆發再生狀態的總持續時間</CSRG.BurstDurationTip>
+  <CSRG.BurstCooldown>爆發冷卻 (ticks)</CSRG.BurstCooldown>
+  <CSRG.BurstCooldownTip>爆發結束後觸發再次爆發所需的冷卻時間</CSRG.BurstCooldownTip>
+  <CSRG.BurstPoolMultiplier>爆發池倍率</CSRG.BurstPoolMultiplier>
+  <CSRG.BurstPoolMultiplierTip>爆發狀態期間治療池的倍率</CSRG.BurstPoolMultiplierTip>
+  <CSRG.LongTermRegen>長期再生</CSRG.LongTermRegen>
+  <CSRG.ScarInterval>疤痕間隔 (ticks)</CSRG.ScarInterval>
+  <CSRG.ScarIntervalTip>永久傷疤癒合嘗試之間的間隔</CSRG.ScarIntervalTip>
+  <CSRG.LimbInterval>肢體間隔 (ticks)</CSRG.LimbInterval>
+  <CSRG.LimbIntervalTip>缺失肢體再生嘗試之間的間隔</CSRG.LimbIntervalTip>
 </LanguageData>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <CSRG_RegenerationBurst.label>再生爆发</CSRG_RegenerationBurst.label>
+  <CSRG_RegenerationBurst.description>再生基因处于爆发模式，快速愈合新鲜伤口。随后将进入冷却期。</CSRG_RegenerationBurst.description>
+  <CSRG_RegenerationBurst.stage.0.label>爆发中</CSRG_RegenerationBurst.stage.0.label>
+  <CSRG_RegenerationBurst.stage.1.label>冷却中</CSRG_RegenerationBurst.stage.1.label>
+</LanguageData>
