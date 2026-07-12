@@ -58,6 +58,10 @@ public static class CSRGModSettingsUI
             "CSRG.RegenSeverityPercent".Translate(), ref s.regenRegeneratingSeverityPercent,
             0.1f, 0.95f, "CSRG.RegenSeverityPercentTip".Translate());
 
+        CSRGSliderInput.SliderWithInput(listing,
+            "CSRG.RegenTissueDecayPerDay".Translate(), ref s.regenTissueDecayPerDay,
+            0.01f, 1f, "CSRG.RegenTissueDecayPerDayTip".Translate());
+
         SectionHeader(listing, "CSRG.LongTermRegen".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,

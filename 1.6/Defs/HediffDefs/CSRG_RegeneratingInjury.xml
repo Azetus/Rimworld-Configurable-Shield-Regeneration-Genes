@@ -4,7 +4,7 @@
     <defName>CSRG_RegeneratingInjury</defName>
     <label>regenerating tissue</label>
     <description>Newly grown tissue that is still developing. It will mature and regain full functionality over time.</description>
-    <hediffClass>CSRG_ConfigurableShieldRegenerationGenes.Genes.Hediff_RegeneratingInjury</hediffClass>
+    <hediffClass>CSRG_ConfigurableShieldRegenerationGenes.Hediffs.Hediff_RegeneratingInjury</hediffClass>
     <isBad>true</isBad>
     <stages>
       <li>
@@ -34,9 +34,7 @@
       </li>
     </stages>
     <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.2</severityPerDay>
-      </li>
+      <li Class="CSRG_ConfigurableShieldRegenerationGenes.Hediffs.HediffCompProperties_RegeneratingTissueDecay" />
     </comps>
   </HediffDef>
 </Defs>

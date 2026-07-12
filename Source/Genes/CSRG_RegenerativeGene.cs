@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using CSRG_ConfigurableShieldRegenerationGenes.Hediffs;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -110,9 +111,10 @@ public class CSRG_RegenerativeGene : Gene
 
         foreach (var regenInjury in candidates)
         {
-            float heal = Mathf.Min(pool, regenInjury.Severity);
-            regenInjury.Severity -= heal;
-            pool -= heal;
+            float maxHealth = regenInjury.Part?.def.GetMaxHealth(pawn) ?? 1f;
+            float healHP = Mathf.Min(pool, regenInjury.Severity * maxHealth);
+            regenInjury.Severity -= healHP / maxHealth;
+            pool -= healHP;
             if (pool <= 0f) break;
         }
 
@@ -154,12 +156,9 @@ public class CSRG_RegenerativeGene : Gene
             var part = missing.Part;
             pawn.health.RestorePart(part);
 
-            float maxHealth = part.def.GetMaxHealth(pawn);
-            float severity = Mathf.Min(SeverityPercent * maxHealth, maxHealth - 1f);
-
             var newborn = (Hediff_RegeneratingInjury)HediffMaker.MakeHediff(
                 CSRG_DefOf.CSRG_RegeneratingInjury, pawn, part);
-            newborn.Severity = severity;
+            newborn.Severity = SeverityPercent;
             pawn.health.AddHediff(newborn);
             return;
         }

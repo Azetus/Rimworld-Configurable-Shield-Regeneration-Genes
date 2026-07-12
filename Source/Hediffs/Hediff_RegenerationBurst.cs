@@ -1,6 +1,6 @@
 using Verse;
 
-namespace CSRG_ConfigurableShieldRegenerationGenes.Genes;
+namespace CSRG_ConfigurableShieldRegenerationGenes.Hediffs;
 
 public class Hediff_RegenerationBurst : HediffWithComps
 {

@@ -12,6 +12,7 @@ public class CSRGModSettings : ModSettings
     public float regenHealInterval = 1200f;
     public float regenHealAmount = 5f;
     public float regenRegeneratingSeverityPercent = 0.8f;
+    public float regenTissueDecayPerDay = 0.2f;
     public float regenBurstInterval = 15f;
     public float regenBurstDuration = 1800f;
     public float regenBurstCooldownDays = 1f;
@@ -30,6 +31,7 @@ public class CSRGModSettings : ModSettings
         Scribe_Values.Look(ref regenHealInterval, nameof(regenHealInterval), 1200f);
         Scribe_Values.Look(ref regenHealAmount, nameof(regenHealAmount), 5f);
         Scribe_Values.Look(ref regenRegeneratingSeverityPercent, nameof(regenRegeneratingSeverityPercent), 0.8f);
+        Scribe_Values.Look(ref regenTissueDecayPerDay, nameof(regenTissueDecayPerDay), 0.2f);
         Scribe_Values.Look(ref regenBurstInterval, nameof(regenBurstInterval), 15f);
         Scribe_Values.Look(ref regenBurstDuration, nameof(regenBurstDuration), 1800f);
         Scribe_Values.Look(ref regenBurstCooldownDays, nameof(regenBurstCooldownDays), 1f);
@@ -48,6 +50,7 @@ public class CSRGModSettings : ModSettings
         regenHealInterval = 1200f;
         regenHealAmount = 5f;
         regenRegeneratingSeverityPercent = 0.8f;
+        regenTissueDecayPerDay = 0.2f;
         regenBurstInterval = 15f;
         regenBurstDuration = 1800f;
         regenBurstCooldownDays = 1f;

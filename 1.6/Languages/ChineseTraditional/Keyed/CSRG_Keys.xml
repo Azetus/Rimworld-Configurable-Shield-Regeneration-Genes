@@ -10,7 +10,8 @@
   <CSRG.RegenHealAmountTip>每脈衝總治療預算</CSRG.RegenHealAmountTip>
   <CSRG.RegenSeverityPercent>新生肢體嚴重度 %</CSRG.RegenSeverityPercent>
   <CSRG.RegenSeverityPercentTip>再生肢體傷口的初始嚴重度，以最大血量百分比表示</CSRG.RegenSeverityPercentTip>
-  <CSRG.BurstSettings>爆發再生設置</CSRG.BurstSettings>
+  <CSRG.RegenTissueDecayPerDay>組織衰減/日</CSRG.RegenTissueDecayPerDay>
+  <CSRG.RegenTissueDecayPerDayTip>再生組織每日自然成熟的速度</CSRG.RegenTissueDecayPerDayTip>  <CSRG.BurstSettings>爆發再生設置</CSRG.BurstSettings>
   <CSRG.BurstInterval>爆發間隔 (ticks)</CSRG.BurstInterval>
   <CSRG.BurstIntervalTip>爆發期間每次癒合脈衝之間的間隔</CSRG.BurstIntervalTip>
   <CSRG.BurstDuration>爆發持續 (ticks)</CSRG.BurstDuration>

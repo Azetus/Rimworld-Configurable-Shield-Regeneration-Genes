@@ -4,7 +4,7 @@
         <defName>CSRG_RegenerationBurst</defName>
         <label>regeneration burst</label>
         <description>The regeneration gene is in burst mode, rapidly healing fresh wounds. This will be followed by a cooldown period.</description>
-        <hediffClass>CSRG_ConfigurableShieldRegenerationGenes.Genes.Hediff_RegenerationBurst</hediffClass>
+        <hediffClass>CSRG_ConfigurableShieldRegenerationGenes.Hediffs.Hediff_RegenerationBurst</hediffClass>
         <isBad>false</isBad>
         <stages>
             <li>
