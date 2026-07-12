@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
   <CSRG.ShieldGeneTip>基因护盾状态</CSRG.ShieldGeneTip>
+  <CSRG.ShieldGeneLabel>纳米机械护盾</CSRG.ShieldGeneLabel>
+  <CSRG.RegenerativeGeneLabel>纳米机械再生</CSRG.RegenerativeGeneLabel>
   <CSRG.RegenerationSettings>再生设置</CSRG.RegenerationSettings>
   <CSRG.RegenHealInterval>愈合间隔 (ticks)</CSRG.RegenHealInterval>
   <CSRG.RegenHealIntervalTip>每次再生脉冲之间的间隔</CSRG.RegenHealIntervalTip>

@@ -11,29 +11,26 @@ public static class CSRGModSettingsUI
     {
         var s = ConfigurableShieldRegenerationGenes.settings;
 
-        float contentHeight = 1200f;
+        float contentHeight = 1300f;
         Rect viewRect = new Rect(0f, 0f, inRect.width - 16f, contentHeight);
         Widgets.BeginScrollView(inRect, ref scrollPosition, viewRect);
 
         var listing = new Listing_Standard();
         listing.Begin(viewRect);
 
-        Text.Font = GameFont.Medium;
-        listing.Label("CSRG.ShieldSettings".Translate());
-        Text.Font = GameFont.Small;
-        listing.Gap();
-        listing.GapLine(12f);
+        listing.GapLine(24f);
+        SectionHeader(listing, "CSRG.ShieldGeneLabel".Translate(), major: true);
 
         CSRGSliderInput.SliderWithInput(listing,
             "CSRG.ShieldMaxEnergy".Translate(), ref s.shieldMaxEnergy,
             10f, 1000f, "CSRG.ShieldMaxEnergyTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
-            "CSRG.ShieldRegenRate".Translate() + " ticks", ref s.shieldRegenPerTick,
+            "CSRG.ShieldRegenRate".Translate(), ref s.shieldRegenPerTick,
             0.01f, 100f, "CSRG.ShieldRegenRateTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
-            "CSRG.ShieldBreakCooldown".Translate() + " ticks", ref s.shieldBreakCooldown,
+            "CSRG.ShieldBreakCooldown".Translate(), ref s.shieldBreakCooldown,
             0f, 3600f, "CSRG.ShieldBreakCooldownTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
@@ -44,16 +41,13 @@ public static class CSRGModSettingsUI
             "CSRG.EnergyLossPerDamage".Translate(), ref s.energyLossPerDamage,
             0.001f, 1f, "CSRG.EnergyLossPerDamageTip".Translate());
 
-        listing.Gap();
-        listing.GapLine(12f);
-        Text.Font = GameFont.Medium;
-        listing.Label("CSRG.RegenerationSettings".Translate());
-        Text.Font = GameFont.Small;
-        listing.Gap();
-        listing.GapLine(12f);
+        listing.GapLine(24f);
+        SectionHeader(listing, "CSRG.RegenerativeGeneLabel".Translate(), major: true);
+
+        SectionHeader(listing, "CSRG.RegenerationSettings".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
-            "CSRG.RegenHealInterval".Translate() + " ticks", ref s.regenHealInterval,
+            "CSRG.RegenHealInterval".Translate(), ref s.regenHealInterval,
             15f, 72000f, "CSRG.RegenHealIntervalTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
@@ -64,40 +58,28 @@ public static class CSRGModSettingsUI
             "CSRG.RegenSeverityPercent".Translate(), ref s.regenRegeneratingSeverityPercent,
             0.1f, 0.95f, "CSRG.RegenSeverityPercentTip".Translate());
 
-        listing.Gap();
-        listing.GapLine(12f);
-        Text.Font = GameFont.Medium;
-        listing.Label("CSRG.LongTermRegen".Translate());
-        Text.Font = GameFont.Small;
-        listing.Gap();
-        listing.GapLine(12f);
+        SectionHeader(listing, "CSRG.LongTermRegen".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
-            "CSRG.ScarInterval".Translate() + " days", ref s.regenScarInterval,
+            "CSRG.ScarInterval".Translate(), ref s.regenScarInterval,
             0.01f, 30f, "CSRG.ScarIntervalTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
-            "CSRG.LimbInterval".Translate() + " days", ref s.regenLimbInterval,
+            "CSRG.LimbInterval".Translate(), ref s.regenLimbInterval,
             0.01f, 30f, "CSRG.LimbIntervalTip".Translate());
 
-        listing.Gap();
-        listing.GapLine(12f);
-        Text.Font = GameFont.Medium;
-        listing.Label("CSRG.BurstSettings".Translate());
-        Text.Font = GameFont.Small;
-        listing.Gap();
-        listing.GapLine(12f);
+        SectionHeader(listing, "CSRG.BurstSettings".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
-            "CSRG.BurstInterval".Translate() + " ticks", ref s.regenBurstInterval,
+            "CSRG.BurstInterval".Translate(), ref s.regenBurstInterval,
             10f, 150f, "CSRG.BurstIntervalTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
-            "CSRG.BurstDuration".Translate() + " ticks", ref s.regenBurstDuration,
+            "CSRG.BurstDuration".Translate(), ref s.regenBurstDuration,
             60f, 7200f, "CSRG.BurstDurationTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
-            "CSRG.BurstCooldown".Translate() + " ticks", ref s.regenBurstCooldown,
+            "CSRG.BurstCooldown".Translate(), ref s.regenBurstCooldown,
             6000f, 3600000f, "CSRG.BurstCooldownTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
@@ -110,5 +92,15 @@ public static class CSRGModSettingsUI
 
         listing.End();
         Widgets.EndScrollView();
+    }
+
+    private static void SectionHeader(Listing_Standard listing, string label, bool major = false)
+    {
+        Text.Font = GameFont.Medium;
+        GUI.color = major ? Color.white : new Color(0.7f, 0.7f, 0.7f);
+        listing.Label(label);
+        GUI.color = Color.white;
+        Text.Font = GameFont.Small;
+        listing.Gap();
     }
 }
