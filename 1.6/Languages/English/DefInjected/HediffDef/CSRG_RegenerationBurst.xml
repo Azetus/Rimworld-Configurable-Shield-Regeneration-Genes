@@ -2,6 +2,6 @@
 <LanguageData>
   <CSRG_RegenerationBurst.label>regeneration burst</CSRG_RegenerationBurst.label>
   <CSRG_RegenerationBurst.description>The regeneration gene is in burst mode, rapidly healing fresh wounds. This will be followed by a cooldown period.</CSRG_RegenerationBurst.description>
-  <CSRG_RegenerationBurst.stage.0.label>burst active</CSRG_RegenerationBurst.stage.0.label>
-  <CSRG_RegenerationBurst.stage.1.label>cooldown</CSRG_RegenerationBurst.stage.1.label>
+  <CSRG_RegenerationBurst.stages.burst_active.label>burst active</CSRG_RegenerationBurst.stages.burst_active.label>
+  <CSRG_RegenerationBurst.stages.cooldown.label>cooldown</CSRG_RegenerationBurst.stages.cooldown.label>
 </LanguageData>

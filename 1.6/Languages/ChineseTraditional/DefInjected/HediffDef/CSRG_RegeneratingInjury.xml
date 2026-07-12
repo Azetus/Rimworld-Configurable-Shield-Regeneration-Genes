@@ -2,9 +2,9 @@
 <LanguageData>
   <CSRG_RegeneratingInjury.label>再生組織</CSRG_RegeneratingInjury.label>
   <CSRG_RegeneratingInjury.description>新生的組織仍在發育中。隨著時間推移，它將成熟並恢復全部功能。</CSRG_RegeneratingInjury.description>
-  <CSRG_RegeneratingInjury.stage.0.label>完全恢復</CSRG_RegeneratingInjury.stage.0.label>
-  <CSRG_RegeneratingInjury.stage.1.label>即將癒合</CSRG_RegeneratingInjury.stage.1.label>
-  <CSRG_RegeneratingInjury.stage.2.label>成熟中</CSRG_RegeneratingInjury.stage.2.label>
-  <CSRG_RegeneratingInjury.stage.3.label>發育中</CSRG_RegeneratingInjury.stage.3.label>
-  <CSRG_RegeneratingInjury.stage.4.label>新生組織</CSRG_RegeneratingInjury.stage.4.label>
+  <CSRG_RegeneratingInjury.stages.fully_restored.label>完全恢復</CSRG_RegeneratingInjury.stages.fully_restored.label>
+  <CSRG_RegeneratingInjury.stages.nearly_healed.label>即將癒合</CSRG_RegeneratingInjury.stages.nearly_healed.label>
+  <CSRG_RegeneratingInjury.stages.maturing.label>成熟中</CSRG_RegeneratingInjury.stages.maturing.label>
+  <CSRG_RegeneratingInjury.stages.developing.label>發育中</CSRG_RegeneratingInjury.stages.developing.label>
+  <CSRG_RegeneratingInjury.stages.nascent.label>新生組織</CSRG_RegeneratingInjury.stages.nascent.label>
 </LanguageData>
