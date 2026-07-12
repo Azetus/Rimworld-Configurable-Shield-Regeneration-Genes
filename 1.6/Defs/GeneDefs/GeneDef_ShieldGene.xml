@@ -9,5 +9,6 @@
     <biostatCpx>5</biostatCpx>
     <biostatMet>-1</biostatMet>
     <biostatArc>2</biostatArc>
+    <iconPath>CSRG_ShieldGene_Icon</iconPath>
   </GeneDef>
 </Defs>

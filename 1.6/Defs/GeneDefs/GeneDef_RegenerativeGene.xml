@@ -10,5 +10,6 @@
     <biostatCpx>4</biostatCpx>
     <biostatMet>-2</biostatMet>
     <biostatArc>1</biostatArc>
+    <iconPath>CSRG_RegenerativeGene_Icon</iconPath>
   </GeneDef>
 </Defs>
