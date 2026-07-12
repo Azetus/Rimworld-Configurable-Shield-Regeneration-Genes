@@ -14,6 +14,8 @@ public class CSRG_RegenerativeGene : Gene
     private int BurstInterval => (int)ConfigurableShieldRegenerationGenes.settings.regenBurstInterval;
     private int BurstDuration => (int)ConfigurableShieldRegenerationGenes.settings.regenBurstDuration;
     private float BurstMultiplier => ConfigurableShieldRegenerationGenes.settings.regenBurstPoolMultiplier;
+    private float BurstThreshold => ConfigurableShieldRegenerationGenes.settings.regenBurstThreshold;
+    private bool BurstEnabled => ConfigurableShieldRegenerationGenes.settings.regenBurstEnabled;
     private int ScarInterval => (int)(ConfigurableShieldRegenerationGenes.settings.regenScarIntervalDays * 60000f);
     private int LimbInterval => (int)(ConfigurableShieldRegenerationGenes.settings.regenLimbIntervalDays * 60000f);
 
@@ -31,19 +33,22 @@ public class CSRG_RegenerativeGene : Gene
                 RegenerationPulse(healRegenerating: true, poolMultiplier: 1f);
         }
 
-        if (burst == null
-            && pawn.health.summaryHealth.SummaryHealthPercent < 0.85f
-            && pawn.health.hediffSet.HasNaturallyHealingInjury())
+        if (BurstEnabled)
         {
-            var h = (Hediff_RegenerationBurst)HediffMaker.MakeHediff(
-                CSRG_DefOf.CSRG_RegenerationBurst, pawn);
-            h.InitBurst(BurstDuration);
-            pawn.health.AddHediff(h);
-        }
-        else if (burst != null && !burst.inCooldown
-            && pawn.IsHashIntervalTick(BurstInterval))
-        {
-            RegenerationPulse(healRegenerating: false, poolMultiplier: BurstMultiplier);
+            if (burst == null
+                && pawn.health.summaryHealth.SummaryHealthPercent < BurstThreshold
+                && pawn.health.hediffSet.HasNaturallyHealingInjury())
+            {
+                var h = (Hediff_RegenerationBurst)HediffMaker.MakeHediff(
+                    CSRG_DefOf.CSRG_RegenerationBurst, pawn);
+                h.InitBurst(BurstDuration);
+                pawn.health.AddHediff(h);
+            }
+            else if (burst != null && !burst.inCooldown
+                && pawn.IsHashIntervalTick(BurstInterval))
+            {
+                RegenerationPulse(healRegenerating: false, poolMultiplier: BurstMultiplier);
+            }
         }
 
         if (pawn.IsHashIntervalTick(ScarInterval))

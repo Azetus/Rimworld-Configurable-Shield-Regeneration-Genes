@@ -17,6 +17,8 @@ public class CSRGModSettings : ModSettings
     public float regenBurstDuration = 900f;
     public float regenBurstCooldownDays = 1f;
     public float regenBurstPoolMultiplier = 1f;
+    public bool regenBurstEnabled = true;
+    public float regenBurstThreshold = 0.85f;
     public float regenScarIntervalDays = 5f;
     public float regenLimbIntervalDays = 5f;
 
@@ -36,6 +38,8 @@ public class CSRGModSettings : ModSettings
         Scribe_Values.Look(ref regenBurstDuration, nameof(regenBurstDuration), 900f);
         Scribe_Values.Look(ref regenBurstCooldownDays, nameof(regenBurstCooldownDays), 1f);
         Scribe_Values.Look(ref regenBurstPoolMultiplier, nameof(regenBurstPoolMultiplier), 1f);
+        Scribe_Values.Look(ref regenBurstEnabled, nameof(regenBurstEnabled), true);
+        Scribe_Values.Look(ref regenBurstThreshold, nameof(regenBurstThreshold), 0.85f);
         Scribe_Values.Look(ref regenScarIntervalDays, nameof(regenScarIntervalDays), 5f);
         Scribe_Values.Look(ref regenLimbIntervalDays, nameof(regenLimbIntervalDays), 5f);
     }
@@ -55,6 +59,8 @@ public class CSRGModSettings : ModSettings
         regenBurstDuration = 900f;
         regenBurstCooldownDays = 1f;
         regenBurstPoolMultiplier = 1f;
+        regenBurstEnabled = true;
+        regenBurstThreshold = 0.85f;
         regenScarIntervalDays = 5f;
         regenLimbIntervalDays = 5f;
     }

@@ -74,6 +74,13 @@ public static class CSRGModSettingsUI
 
         SectionHeader(listing, "CSRG.BurstSettings".Translate());
 
+        listing.CheckboxLabeled(
+            "CSRG.BurstEnabled".Translate(), ref s.regenBurstEnabled);
+
+        CSRGSliderInput.SliderWithInput(listing,
+            "CSRG.BurstThreshold".Translate(), ref s.regenBurstThreshold,
+            0.1f, 0.95f, "CSRG.BurstThresholdTip".Translate());
+
         CSRGSliderInput.SliderWithInput(listing,
             "CSRG.BurstInterval".Translate(), ref s.regenBurstInterval,
             1f, 3600f, "CSRG.BurstIntervalTip".Translate());
