@@ -1,4 +1,5 @@
-﻿using CSRG_ConfigurableShieldRegenerationGenes.Settings;
+﻿using System;
+using CSRG_ConfigurableShieldRegenerationGenes.Settings;
 using HarmonyLib;
 using UnityEngine;
 using Verse;
@@ -13,7 +14,14 @@ public class ConfigurableShieldRegenerationGenes : Mod
     {
         settings = GetSettings<CSRGModSettings>();
         Log.Message("<color=cyan>[Configurable Shield & Regeneration Genes]</color> loaded!");
-        new Harmony("Aliza.ConfigurableShieldRegenerationGenes").PatchAll();
+        try
+        {
+            new Harmony("Aliza.ConfigurableShieldRegenerationGenes").PatchAll();
+        }
+        catch (Exception ex)
+        {
+            Log.Error("<color=red>[Configurable Shield & Regeneration Genes]</color> Harmony patch failed: " + ex);
+        }
     }
 
     public override string SettingsCategory()

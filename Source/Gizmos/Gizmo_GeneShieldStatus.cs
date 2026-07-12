@@ -28,6 +28,7 @@ public class Gizmo_GeneShieldStatus : Gizmo
 
     public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
     {
+        if (gene == null) return new GizmoResult(GizmoState.Clear);
         Rect rect = new Rect(topLeft.x, topLeft.y, GetWidth(maxWidth), 75f);
         Rect rect2 = rect.ContractedBy(6f);
         Widgets.DrawWindowBackground(rect);

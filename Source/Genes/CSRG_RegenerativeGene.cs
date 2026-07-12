@@ -22,6 +22,7 @@ public class CSRG_RegenerativeGene : Gene
     public override void Tick()
     {
         base.Tick();
+        if (pawn?.health?.hediffSet == null) return;
 
         var burst = pawn.health.hediffSet
             .GetFirstHediffOfDef(CSRG_DefOf.CSRG_RegenerationBurst)
@@ -38,10 +39,12 @@ public class CSRG_RegenerativeGene : Gene
             if (burst == null
                 && pawn.health.summaryHealth.SummaryHealthPercent < BurstThreshold
                 && pawn.health.hediffSet.HasNaturallyHealingInjury()
+                && pawn.mindState != null
                 && Find.TickManager.TicksGame - pawn.mindState.lastHarmTick < BurstDuration)
             {
                 var h = (Hediff_RegenerationBurst)HediffMaker.MakeHediff(
                     CSRG_DefOf.CSRG_RegenerationBurst, pawn);
+                if (h == null) return;
                 h.InitBurst(BurstDuration);
                 pawn.health.AddHediff(h);
             }
@@ -115,17 +118,23 @@ public class CSRG_RegenerativeGene : Gene
 
         if (candidates.Count == 0 || pool <= 0f) return false;
 
+        bool healed = false;
         foreach (var regenInjury in candidates)
         {
             float maxHealth = regenInjury.Part?.def.GetMaxHealth(pawn) ?? 1f;
             float healHP = Mathf.Min(pool, regenInjury.Severity * maxHealth);
-            regenInjury.Severity -= healHP / maxHealth;
-            pool -= healHP;
-            if (pool <= 0f) break;
+            if (healHP > 0f)
+            {
+                regenInjury.Severity -= healHP / maxHealth;
+                pool -= healHP;
+                healed = true;
+                if (pool <= 0f) break;
+            }
         }
 
-        pawn.health.Notify_HediffChanged(candidates[candidates.Count - 1]);
-        return true;
+        if (healed)
+            pawn.health.Notify_HediffChanged(candidates[candidates.Count - 1]);
+        return healed;
     }
 
     private bool ConsumePool(List<Hediff_Injury> candidates, ref float pool)
@@ -164,6 +173,7 @@ public class CSRG_RegenerativeGene : Gene
 
             var newborn = (Hediff_RegeneratingInjury)HediffMaker.MakeHediff(
                 CSRG_DefOf.CSRG_RegeneratingInjury, pawn, part);
+            if (newborn == null) return;
             newborn.Severity = SeverityPercent;
             pawn.health.AddHediff(newborn);
             return;

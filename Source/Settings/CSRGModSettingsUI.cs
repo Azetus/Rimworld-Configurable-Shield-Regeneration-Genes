@@ -6,17 +6,27 @@ namespace CSRG_ConfigurableShieldRegenerationGenes.Settings;
 public static class CSRGModSettingsUI
 {
     private static Vector2 scrollPosition;
+    private static float cachedContentHeight = 1300f;
 
     public static void SettingsWindowContents(Rect inRect)
     {
         var s = ConfigurableShieldRegenerationGenes.settings;
+        float width = inRect.width - 16f;
 
-        float contentHeight = 1300f;
-        Rect viewRect = new Rect(0f, 0f, inRect.width - 16f, contentHeight);
+        Rect viewRect = new Rect(0f, 0f, width, cachedContentHeight);
         Widgets.BeginScrollView(inRect, ref scrollPosition, viewRect);
 
         var listing = new Listing_Standard();
         listing.Begin(viewRect);
+        BuildSettingsContent(listing, s);
+        cachedContentHeight = listing.CurHeight + listing.verticalSpacing;
+        listing.End();
+
+        Widgets.EndScrollView();
+    }
+
+    private static void BuildSettingsContent(Listing_Standard listing, CSRGModSettings s)
+    {
 
         listing.GapLine(24f);
         SectionHeader(listing, "CSRG.ShieldGeneLabel".Translate(), major: true);
@@ -100,9 +110,6 @@ public static class CSRGModSettingsUI
         listing.Gap();
         if (listing.ButtonText("CSRG.ResetToDefaults".Translate()))
             s.ResetSettings();
-
-        listing.End();
-        Widgets.EndScrollView();
     }
 
     private static void SectionHeader(Listing_Standard listing, string label, bool major = false)
