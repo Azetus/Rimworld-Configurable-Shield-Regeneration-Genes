@@ -10,15 +10,15 @@ public class CSRGModSettings : ModSettings
     public float shieldEnergyOnReset = 0.2f;
     public float energyLossPerDamage = 1.0f;
     public float regenHealInterval = 1200f;
-    public float regenHealAmount = 5f;
+    public float regenHealAmount = 2f;
     public float regenRegeneratingSeverityPercent = 0.8f;
     public float regenTissueDecayPerDay = 0.2f;
     public float regenBurstInterval = 15f;
-    public float regenBurstDuration = 1800f;
+    public float regenBurstDuration = 900f;
     public float regenBurstCooldownDays = 1f;
     public float regenBurstPoolMultiplier = 1f;
-    public float regenScarIntervalDays = 15f;
-    public float regenLimbIntervalDays = 15f;
+    public float regenScarIntervalDays = 5f;
+    public float regenLimbIntervalDays = 5f;
 
     public override void ExposeData()
     {
@@ -29,15 +29,15 @@ public class CSRGModSettings : ModSettings
         Scribe_Values.Look(ref shieldEnergyOnReset, nameof(shieldEnergyOnReset), 0.2f);
         Scribe_Values.Look(ref energyLossPerDamage, nameof(energyLossPerDamage), 1.0f);
         Scribe_Values.Look(ref regenHealInterval, nameof(regenHealInterval), 1200f);
-        Scribe_Values.Look(ref regenHealAmount, nameof(regenHealAmount), 5f);
+        Scribe_Values.Look(ref regenHealAmount, nameof(regenHealAmount), 2f);
         Scribe_Values.Look(ref regenRegeneratingSeverityPercent, nameof(regenRegeneratingSeverityPercent), 0.8f);
         Scribe_Values.Look(ref regenTissueDecayPerDay, nameof(regenTissueDecayPerDay), 0.2f);
         Scribe_Values.Look(ref regenBurstInterval, nameof(regenBurstInterval), 15f);
-        Scribe_Values.Look(ref regenBurstDuration, nameof(regenBurstDuration), 1800f);
+        Scribe_Values.Look(ref regenBurstDuration, nameof(regenBurstDuration), 900f);
         Scribe_Values.Look(ref regenBurstCooldownDays, nameof(regenBurstCooldownDays), 1f);
         Scribe_Values.Look(ref regenBurstPoolMultiplier, nameof(regenBurstPoolMultiplier), 1f);
-        Scribe_Values.Look(ref regenScarIntervalDays, nameof(regenScarIntervalDays), 15f);
-        Scribe_Values.Look(ref regenLimbIntervalDays, nameof(regenLimbIntervalDays), 15f);
+        Scribe_Values.Look(ref regenScarIntervalDays, nameof(regenScarIntervalDays), 5f);
+        Scribe_Values.Look(ref regenLimbIntervalDays, nameof(regenLimbIntervalDays), 5f);
     }
 
     public void ResetSettings()
@@ -48,14 +48,14 @@ public class CSRGModSettings : ModSettings
         shieldEnergyOnReset = 0.2f;
         energyLossPerDamage = 1.0f;
         regenHealInterval = 1200f;
-        regenHealAmount = 5f;
+        regenHealAmount = 2f;
         regenRegeneratingSeverityPercent = 0.8f;
         regenTissueDecayPerDay = 0.2f;
         regenBurstInterval = 15f;
-        regenBurstDuration = 1800f;
+        regenBurstDuration = 900f;
         regenBurstCooldownDays = 1f;
         regenBurstPoolMultiplier = 1f;
-        regenScarIntervalDays = 15f;
-        regenLimbIntervalDays = 15f;
+        regenScarIntervalDays = 5f;
+        regenLimbIntervalDays = 5f;
     }
 }

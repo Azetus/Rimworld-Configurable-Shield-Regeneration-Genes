@@ -76,7 +76,7 @@ public static class CSRGModSettingsUI
 
         CSRGSliderInput.SliderWithInput(listing,
             "CSRG.BurstInterval".Translate(), ref s.regenBurstInterval,
-            10f, 150f, "CSRG.BurstIntervalTip".Translate());
+            1f, 3600f, "CSRG.BurstIntervalTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
             "CSRG.BurstDuration".Translate(), ref s.regenBurstDuration,
