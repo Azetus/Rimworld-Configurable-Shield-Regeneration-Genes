@@ -4,8 +4,8 @@
   <CSRG.ShieldSettings>護盾設置</CSRG.ShieldSettings>
   <CSRG.ShieldMaxEnergy>最大能量</CSRG.ShieldMaxEnergy>
   <CSRG.ShieldMaxEnergyTip>護盾能量上限</CSRG.ShieldMaxEnergyTip>
-  <CSRG.ShieldRegenRate>恢復速率 (/tick)</CSRG.ShieldRegenRate>
-  <CSRG.ShieldRegenRateTip>每Tick恢復的能量值</CSRG.ShieldRegenRateTip>
+  <CSRG.ShieldRegenRate>恢復量</CSRG.ShieldRegenRate>
+  <CSRG.ShieldRegenRateTip>每Tick恢復的護盾能量</CSRG.ShieldRegenRateTip>
   <CSRG.ShieldBreakCooldown>破盾冷卻 (ticks)</CSRG.ShieldBreakCooldown>
   <CSRG.ShieldBreakCooldownTip>護盾破碎後開始充能所需等待的Tick數</CSRG.ShieldBreakCooldownTip>
   <CSRG.ShieldEnergyOnReset>重置能量比例</CSRG.ShieldEnergyOnReset>

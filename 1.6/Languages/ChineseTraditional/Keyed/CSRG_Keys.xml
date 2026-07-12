@@ -15,8 +15,8 @@
   <CSRG.BurstIntervalTip>爆發期間每次癒合脈衝之間的間隔</CSRG.BurstIntervalTip>
   <CSRG.BurstDuration>爆發持續 (ticks)</CSRG.BurstDuration>
   <CSRG.BurstDurationTip>爆發再生狀態的總持續時間</CSRG.BurstDurationTip>
-  <CSRG.BurstCooldown>爆發冷卻 (ticks)</CSRG.BurstCooldown>
-  <CSRG.BurstCooldownTip>爆發結束後觸發再次爆發所需的冷卻時間</CSRG.BurstCooldownTip>
+  <CSRG.BurstCooldown>爆發冷卻 (days)</CSRG.BurstCooldown>
+  <CSRG.BurstCooldownTip>爆發結束後觸發再次爆發所需的天數</CSRG.BurstCooldownTip>
   <CSRG.BurstPoolMultiplier>爆發池倍率</CSRG.BurstPoolMultiplier>
   <CSRG.BurstPoolMultiplierTip>爆發狀態期間治療池的倍率</CSRG.BurstPoolMultiplierTip>
   <CSRG.LongTermRegen>長期再生</CSRG.LongTermRegen>

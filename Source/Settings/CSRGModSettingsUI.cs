@@ -61,11 +61,11 @@ public static class CSRGModSettingsUI
         SectionHeader(listing, "CSRG.LongTermRegen".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
-            "CSRG.ScarInterval".Translate(), ref s.regenScarInterval,
+            "CSRG.ScarInterval".Translate(), ref s.regenScarIntervalDays,
             0.01f, 30f, "CSRG.ScarIntervalTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
-            "CSRG.LimbInterval".Translate(), ref s.regenLimbInterval,
+            "CSRG.LimbInterval".Translate(), ref s.regenLimbIntervalDays,
             0.01f, 30f, "CSRG.LimbIntervalTip".Translate());
 
         SectionHeader(listing, "CSRG.BurstSettings".Translate());
@@ -79,8 +79,8 @@ public static class CSRGModSettingsUI
             60f, 7200f, "CSRG.BurstDurationTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
-            "CSRG.BurstCooldown".Translate(), ref s.regenBurstCooldown,
-            6000f, 3600000f, "CSRG.BurstCooldownTip".Translate());
+            "CSRG.BurstCooldown".Translate(), ref s.regenBurstCooldownDays,
+            0.01f, 5f, "CSRG.BurstCooldownTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
             "CSRG.BurstPoolMultiplier".Translate(), ref s.regenBurstPoolMultiplier,

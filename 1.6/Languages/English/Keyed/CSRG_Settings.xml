@@ -4,8 +4,8 @@
   <CSRG.ShieldSettings>Shield Settings</CSRG.ShieldSettings>
   <CSRG.ShieldMaxEnergy>Max Energy</CSRG.ShieldMaxEnergy>
   <CSRG.ShieldMaxEnergyTip>Maximum shield energy capacity</CSRG.ShieldMaxEnergyTip>
-  <CSRG.ShieldRegenRate>Regen Rate (/tick)</CSRG.ShieldRegenRate>
-  <CSRG.ShieldRegenRateTip>Energy regenerated per tick</CSRG.ShieldRegenRateTip>
+  <CSRG.ShieldRegenRate>Regen Amount</CSRG.ShieldRegenRate>
+  <CSRG.ShieldRegenRateTip>Shield energy restored each tick</CSRG.ShieldRegenRateTip>
   <CSRG.ShieldBreakCooldown>Break Cooldown (ticks)</CSRG.ShieldBreakCooldown>
   <CSRG.ShieldBreakCooldownTip>Ticks before shield starts recharging after breaking</CSRG.ShieldBreakCooldownTip>
   <CSRG.ShieldEnergyOnReset>Energy On Reset</CSRG.ShieldEnergyOnReset>

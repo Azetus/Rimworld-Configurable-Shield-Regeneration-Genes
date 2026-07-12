@@ -15,8 +15,8 @@
   <CSRG.BurstIntervalTip>Ticks between each healing pulse during burst</CSRG.BurstIntervalTip>
   <CSRG.BurstDuration>Burst Duration (ticks)</CSRG.BurstDuration>
   <CSRG.BurstDurationTip>Total duration of the burst regeneration state</CSRG.BurstDurationTip>
-  <CSRG.BurstCooldown>Burst Cooldown (ticks)</CSRG.BurstCooldown>
-  <CSRG.BurstCooldownTip>Cooldown before burst can be triggered again</CSRG.BurstCooldownTip>
+  <CSRG.BurstCooldown>Burst Cooldown (days)</CSRG.BurstCooldown>
+  <CSRG.BurstCooldownTip>Days before burst can be triggered again</CSRG.BurstCooldownTip>
   <CSRG.BurstPoolMultiplier>Burst Pool Multiplier</CSRG.BurstPoolMultiplier>
   <CSRG.BurstPoolMultiplierTip>Heal pool multiplier applied during burst state</CSRG.BurstPoolMultiplierTip>
   <CSRG.LongTermRegen>Long-Term Regeneration</CSRG.LongTermRegen>

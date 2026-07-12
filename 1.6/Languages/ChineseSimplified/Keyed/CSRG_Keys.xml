@@ -15,8 +15,8 @@
   <CSRG.BurstIntervalTip>爆发期间每次愈合脉冲之间的间隔</CSRG.BurstIntervalTip>
   <CSRG.BurstDuration>爆发持续 (ticks)</CSRG.BurstDuration>
   <CSRG.BurstDurationTip>爆发再生状态的总持续时间</CSRG.BurstDurationTip>
-  <CSRG.BurstCooldown>爆发冷却 (ticks)</CSRG.BurstCooldown>
-  <CSRG.BurstCooldownTip>爆发结束后触发再次爆发所需的冷却时间</CSRG.BurstCooldownTip>
+  <CSRG.BurstCooldown>爆发冷却 (days)</CSRG.BurstCooldown>
+  <CSRG.BurstCooldownTip>爆发结束后触发再次爆发所需的天数</CSRG.BurstCooldownTip>
   <CSRG.BurstPoolMultiplier>爆发池倍率</CSRG.BurstPoolMultiplier>
   <CSRG.BurstPoolMultiplierTip>爆发状态期间治疗池的倍率</CSRG.BurstPoolMultiplierTip>
   <CSRG.LongTermRegen>长期再生</CSRG.LongTermRegen>

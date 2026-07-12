@@ -14,10 +14,10 @@ public class CSRGModSettings : ModSettings
     public float regenRegeneratingSeverityPercent = 0.8f;
     public float regenBurstInterval = 15f;
     public float regenBurstDuration = 1800f;
-    public float regenBurstCooldown = 60000f;
-    public float regenBurstPoolMultiplier = 3f;
-    public float regenScarInterval = 15f;
-    public float regenLimbInterval = 15f;
+    public float regenBurstCooldownDays = 1f;
+    public float regenBurstPoolMultiplier = 1f;
+    public float regenScarIntervalDays = 15f;
+    public float regenLimbIntervalDays = 15f;
 
     public override void ExposeData()
     {
@@ -32,10 +32,10 @@ public class CSRGModSettings : ModSettings
         Scribe_Values.Look(ref regenRegeneratingSeverityPercent, nameof(regenRegeneratingSeverityPercent), 0.8f);
         Scribe_Values.Look(ref regenBurstInterval, nameof(regenBurstInterval), 15f);
         Scribe_Values.Look(ref regenBurstDuration, nameof(regenBurstDuration), 1800f);
-        Scribe_Values.Look(ref regenBurstCooldown, nameof(regenBurstCooldown), 60000f);
-        Scribe_Values.Look(ref regenBurstPoolMultiplier, nameof(regenBurstPoolMultiplier), 3f);
-        Scribe_Values.Look(ref regenScarInterval, nameof(regenScarInterval), 15f);
-        Scribe_Values.Look(ref regenLimbInterval, nameof(regenLimbInterval), 15f);
+        Scribe_Values.Look(ref regenBurstCooldownDays, nameof(regenBurstCooldownDays), 1f);
+        Scribe_Values.Look(ref regenBurstPoolMultiplier, nameof(regenBurstPoolMultiplier), 1f);
+        Scribe_Values.Look(ref regenScarIntervalDays, nameof(regenScarIntervalDays), 15f);
+        Scribe_Values.Look(ref regenLimbIntervalDays, nameof(regenLimbIntervalDays), 15f);
     }
 
     public void ResetSettings()
@@ -50,9 +50,9 @@ public class CSRGModSettings : ModSettings
         regenRegeneratingSeverityPercent = 0.8f;
         regenBurstInterval = 15f;
         regenBurstDuration = 1800f;
-        regenBurstCooldown = 60000f;
-        regenBurstPoolMultiplier = 3f;
-        regenScarInterval = 15f;
-        regenLimbInterval = 15f;
+        regenBurstCooldownDays = 1f;
+        regenBurstPoolMultiplier = 1f;
+        regenScarIntervalDays = 15f;
+        regenLimbIntervalDays = 15f;
     }
 }

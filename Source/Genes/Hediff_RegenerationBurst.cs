@@ -26,7 +26,7 @@ public class Hediff_RegenerationBurst : HediffWithComps
         if (!inCooldown)
         {
             inCooldown = true;
-            remainingTicks = (int)ConfigurableShieldRegenerationGenes.settings.regenBurstCooldown;
+            remainingTicks = (int)(ConfigurableShieldRegenerationGenes.settings.regenBurstCooldownDays * 60000f);
             Severity = 0.6f;
             pawn.health.Notify_HediffChanged(this);
         }
