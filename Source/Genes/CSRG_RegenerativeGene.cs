@@ -37,7 +37,8 @@ public class CSRG_RegenerativeGene : Gene
         {
             if (burst == null
                 && pawn.health.summaryHealth.SummaryHealthPercent < BurstThreshold
-                && pawn.health.hediffSet.HasNaturallyHealingInjury())
+                && pawn.health.hediffSet.HasNaturallyHealingInjury()
+                && Find.TickManager.TicksGame - pawn.mindState.lastHarmTick < BurstDuration)
             {
                 var h = (Hediff_RegenerationBurst)HediffMaker.MakeHediff(
                     CSRG_DefOf.CSRG_RegenerationBurst, pawn);
