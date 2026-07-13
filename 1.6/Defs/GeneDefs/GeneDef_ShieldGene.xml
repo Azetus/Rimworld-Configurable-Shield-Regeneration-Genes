@@ -9,6 +9,9 @@
     <biostatCpx>5</biostatCpx>
     <biostatMet>-1</biostatMet>
     <biostatArc>2</biostatArc>
+    <statFactors>
+      <Flammability>0</Flammability>
+    </statFactors>
     <iconPath>CSRG_ShieldGene_Icon</iconPath>
   </GeneDef>
 </Defs>
