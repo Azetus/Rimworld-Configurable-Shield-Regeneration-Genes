@@ -124,8 +124,8 @@ public class CSRG_ShieldGene : Gene
     public override void ExposeData()
     {
         base.ExposeData();
-        Scribe_Values.Look(ref energy, "shieldEnergy", 0f);
-        Scribe_Values.Look(ref ticksToReset, "ticksToReset", -1);
-        Scribe_Values.Look(ref lastKeepDisplayTick, "lastKeepDisplayTick", 0);
+        Scribe_Values.Look(ref energy, nameof(energy), 0f);
+        Scribe_Values.Look(ref ticksToReset, nameof(ticksToReset), -1);
+        Scribe_Values.Look(ref lastKeepDisplayTick, nameof(lastKeepDisplayTick), 0);
     }
 }

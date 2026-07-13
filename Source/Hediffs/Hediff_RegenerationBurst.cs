@@ -39,7 +39,7 @@ public class Hediff_RegenerationBurst : HediffWithComps
     public override void ExposeData()
     {
         base.ExposeData();
-        Scribe_Values.Look(ref remainingTicks, "remainingTicks", 0);
-        Scribe_Values.Look(ref inCooldown, "inCooldown", false);
+        Scribe_Values.Look(ref remainingTicks, nameof(remainingTicks), 0);
+        Scribe_Values.Look(ref inCooldown, nameof(inCooldown), false);
     }
 }
