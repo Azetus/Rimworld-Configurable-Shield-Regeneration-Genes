@@ -8,10 +8,12 @@
     <displayCategory>Archite</displayCategory>
     <biostatCpx>5</biostatCpx>
     <biostatMet>-1</biostatMet>
-    <biostatArc>2</biostatArc>
+    <biostatArc>1</biostatArc>
     <statFactors>
       <Flammability>0</Flammability>
     </statFactors>
+    <canGenerateInGeneSet>true</canGenerateInGeneSet>
+    <selectionWeight>1</selectionWeight>
     <iconPath>CSRG_ShieldGene_Icon</iconPath>
   </GeneDef>
 </Defs>
