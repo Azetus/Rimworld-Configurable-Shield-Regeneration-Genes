@@ -38,7 +38,7 @@ public class CSRG_RegenerativeGene : Gene
 
         Hediff_RegenerationBurst? burst = null;
         Hediff? tendTarget = null;
-        float maxTendPriority = 0f;
+        float maxTendPriority = float.MinValue;
         Hediff? bloodLoss = null;
 
         if (needFullClassify)
