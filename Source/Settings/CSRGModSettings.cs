@@ -20,7 +20,7 @@ public class CSRGModSettings : ModSettings
     public bool regenBurstEnabled = true;
     public float regenBurstThreshold = 0.85f;
     public float regenScarIntervalDays = 5f;
-    public float regenLimbIntervalDays = 5f;
+    public float regenLimbIntervalDays = 7f;
 
     public override void ExposeData()
     {
@@ -41,7 +41,7 @@ public class CSRGModSettings : ModSettings
         Scribe_Values.Look(ref regenBurstEnabled, nameof(regenBurstEnabled), true);
         Scribe_Values.Look(ref regenBurstThreshold, nameof(regenBurstThreshold), 0.85f);
         Scribe_Values.Look(ref regenScarIntervalDays, nameof(regenScarIntervalDays), 5f);
-        Scribe_Values.Look(ref regenLimbIntervalDays, nameof(regenLimbIntervalDays), 5f);
+        Scribe_Values.Look(ref regenLimbIntervalDays, nameof(regenLimbIntervalDays), 7f);
     }
 
     public void ResetSettings()
@@ -62,6 +62,6 @@ public class CSRGModSettings : ModSettings
         regenBurstEnabled = true;
         regenBurstThreshold = 0.85f;
         regenScarIntervalDays = 5f;
-        regenLimbIntervalDays = 5f;
+        regenLimbIntervalDays = 7f;
     }
 }
