@@ -2,7 +2,7 @@
 <Defs>
   <GeneDef>
     <defName>CSRG_ShieldGene</defName>
-    <label>nanomechanical shield</label>
+    <label>Nanomechanical shield</label>
     <description>Carriers of this gene have special archite nanomachines within their cells. These nanomachines generate an energy shield on the carrier's surface, absorbing incoming damage and recharging over time. When broken, requires a cooldown period before reactivation.</description>
     <geneClass>CSRG_ConfigurableShieldRegenerationGenes.Genes.CSRG_ShieldGene</geneClass>
     <displayCategory>Archite</displayCategory>

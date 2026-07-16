@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
   <CSRG.ShieldGeneTip>Gene shield status</CSRG.ShieldGeneTip>
-  <CSRG.ShieldGeneLabel>nanomechanical shield</CSRG.ShieldGeneLabel>
-  <CSRG.RegenerativeGeneLabel>nanomechanical regeneration</CSRG.RegenerativeGeneLabel>
+  <CSRG.ShieldGeneLabel>Nanomechanical shield</CSRG.ShieldGeneLabel>
+  <CSRG.RegenerativeGeneLabel>Nanomechanical regeneration</CSRG.RegenerativeGeneLabel>
   <CSRG.RegenerationSettings>Regeneration Settings</CSRG.RegenerationSettings>
   <CSRG.RegenHealInterval>Heal Interval (ticks)</CSRG.RegenHealInterval>
   <CSRG.RegenHealIntervalTip>Ticks between each regeneration pulse</CSRG.RegenHealIntervalTip>
