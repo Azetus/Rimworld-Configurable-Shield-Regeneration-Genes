@@ -62,7 +62,7 @@ public static class CSRGModSettingsUI
 
         CSRGSliderInput.SliderWithInput(listing,
             "CSRG.RegenHealAmount".Translate(), ref s.regenHealAmount,
-            1f, 100f, "CSRG.RegenHealAmountTip".Translate());
+            0.1f, 100f, "CSRG.RegenHealAmountTip".Translate());
 
         CSRGSliderInput.SliderWithInput(listing,
             "CSRG.RegenSeverityPercent".Translate(), ref s.regenRegeneratingSeverityPercent,
