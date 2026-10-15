@@ -25,5 +25,5 @@
         <li>brrainz.harmony</li>
     </loadAfter>
     <description>Configurable Shield and Regeneration Genes</description>
-    <modVersion IgnoreIfNoMatchingField="True">1.1.0</modVersion>
+    <modVersion IgnoreIfNoMatchingField="True">1.2.0</modVersion>
 </ModMetaData>
