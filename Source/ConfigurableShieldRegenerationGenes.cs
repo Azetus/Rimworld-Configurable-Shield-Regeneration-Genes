@@ -1,5 +1,4 @@
-﻿using System;
-using CSRG_ConfigurableShieldRegenerationGenes.Settings;
+﻿using CSRG_ConfigurableShieldRegenerationGenes.Settings;
 using HarmonyLib;
 using UnityEngine;
 using Verse;

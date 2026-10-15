@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using CSRG_ConfigurableShieldRegenerationGenes.Hediffs;
 using RimWorld;
 using UnityEngine;
@@ -8,6 +7,11 @@ namespace CSRG_ConfigurableShieldRegenerationGenes.Genes;
 
 public class CSRG_RegenerativeGene : Gene
 {
+    private const int LongTermCheckInterval = 250;
+
+    private int lastScarHealTick = -1;
+    private int lastLimbRegenTick = -1;
+
     private int HealInterval => (int)ConfigurableShieldRegenerationGenes.settings.regenHealInterval;
     private float HealAmount => ConfigurableShieldRegenerationGenes.settings.regenHealAmount;
     private float SeverityPercent => ConfigurableShieldRegenerationGenes.settings.regenRegeneratingSeverityPercent;
@@ -22,6 +26,49 @@ public class CSRG_RegenerativeGene : Gene
     private readonly List<Hediff_Injury> normalWoundBuffer = new();
     private readonly List<Hediff_RegeneratingInjury> regenWoundBuffer = new();
 
+    public override void PostAdd()
+    {
+        base.PostAdd();
+        lastScarHealTick = lastLimbRegenTick = Find.TickManager.TicksGame;
+    }
+
+    public override void ExposeData()
+    {
+        base.ExposeData();
+        Scribe_Values.Look(ref lastScarHealTick, nameof(lastScarHealTick), -1);
+        Scribe_Values.Look(ref lastLimbRegenTick, nameof(lastLimbRegenTick), -1);
+
+        if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            ValidateLongTermTimestamps(Find.TickManager.TicksGame);
+    }
+
+    private void ValidateLongTermTimestamps(int now)
+    {
+        // Another mod may replace the global clock with an earlier tick count during play.
+        if (lastScarHealTick < 0 || lastScarHealTick > now) lastScarHealTick = now;
+        if (lastLimbRegenTick < 0 || lastLimbRegenTick > now) lastLimbRegenTick = now;
+    }
+
+    public override void TickInterval(int delta)
+    {
+        base.TickInterval(delta);
+        if (pawn?.health?.hediffSet == null || !pawn.IsHashIntervalTick(LongTermCheckInterval, delta))
+            return;
+
+        int now = Find.TickManager.TicksGame;
+        ValidateLongTermTimestamps(now);
+        // Match vanilla's eligible targets; an empty attempt must not consume a ready cycle.
+        if (now - lastScarHealTick >= ScarInterval
+            && pawn.health.hediffSet.hediffs.Any(h => h.IsPermanent() || h.def.chronic))
+        {
+            HediffComp_HealPermanentWounds.TryHealRandomPermanentWound(pawn, LabelCap);
+            lastScarHealTick = now;
+        }
+
+        if (now - lastLimbRegenTick >= LimbInterval && TryRegenerateLimb())
+            lastLimbRegenTick = now;
+    }
+
     public override void Tick()
     {
         base.Tick();
@@ -29,11 +76,7 @@ public class CSRG_RegenerativeGene : Gene
 
         bool isHealTick = pawn.IsHashIntervalTick(HealInterval);
         bool isBurstPulseTick = BurstEnabled && pawn.IsHashIntervalTick(BurstInterval);
-        bool isScarTick = pawn.IsHashIntervalTick(ScarInterval);
-        bool isLimbTick = pawn.IsHashIntervalTick(LimbInterval);
-        bool needFullClassify = isHealTick || isBurstPulseTick;
-
-        if (!needFullClassify && !isScarTick && !isLimbTick)
+        if (!isHealTick && !isBurstPulseTick)
             return;
 
         Hediff_RegenerationBurst? burst = null;
@@ -41,11 +84,8 @@ public class CSRG_RegenerativeGene : Gene
         float maxTendPriority = float.MinValue;
         Hediff? bloodLoss = null;
 
-        if (needFullClassify)
-        {
-            normalWoundBuffer.Clear();
-            regenWoundBuffer.Clear();
-        }
+        normalWoundBuffer.Clear();
+        regenWoundBuffer.Clear();
 
         foreach (var h in pawn.health.hediffSet.hediffs)
         {
@@ -53,8 +93,6 @@ public class CSRG_RegenerativeGene : Gene
 
             if (BurstEnabled && h is Hediff_RegenerationBurst burstCandidate)
                 burst = burstCandidate;
-
-            if (!needFullClassify) continue;
 
             if (h.TendableNow() && h.TendPriority > maxTendPriority)
             {
@@ -99,12 +137,6 @@ public class CSRG_RegenerativeGene : Gene
                 ExecuteHealing(tendTarget, bloodLoss, healRegenerating: false, poolMultiplier: BurstMultiplier);
             }
         }
-
-        if (isScarTick)
-            HediffComp_HealPermanentWounds.TryHealRandomPermanentWound(pawn, LabelCap);
-
-        if (isLimbTick)
-            RegenerateLimb();
     }
 
     private void ExecuteHealing(Hediff? tendTarget, Hediff? bloodLoss, bool healRegenerating, float poolMultiplier)
@@ -160,10 +192,10 @@ public class CSRG_RegenerativeGene : Gene
         return true;
     }
 
-    private void RegenerateLimb()
+    private bool TryRegenerateLimb()
     {
         var missingParts = pawn.health.hediffSet.GetMissingPartsCommonAncestors();
-        if (missingParts.NullOrEmpty()) return;
+        if (missingParts.NullOrEmpty()) return false;
 
         foreach (var missing in missingParts)
         {
@@ -175,10 +207,12 @@ public class CSRG_RegenerativeGene : Gene
 
             var newborn = (Hediff_RegeneratingInjury)HediffMaker.MakeHediff(
                 CSRG_DefOf.CSRG_RegeneratingInjury, pawn, part);
-            if (newborn == null) return;
+            if (newborn == null) return false;
             newborn.Severity = SeverityPercent;
             pawn.health.AddHediff(newborn);
-            return;
+            return true;
         }
+
+        return false;
     }
 }
