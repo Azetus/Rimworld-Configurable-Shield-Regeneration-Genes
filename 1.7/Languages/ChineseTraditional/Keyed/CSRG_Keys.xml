@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <CSRG.ShieldGeneTip>基因護盾狀態</CSRG.ShieldGeneTip>
+  <CSRG.ShieldGeneLabel>奈米機械護盾</CSRG.ShieldGeneLabel>
+  <CSRG.RegenerativeGeneLabel>奈米機械再生</CSRG.RegenerativeGeneLabel>
+  <CSRG.RegenerationSettings>再生設置</CSRG.RegenerationSettings>
+  <CSRG.RegenHealInterval>癒合間隔 (ticks)</CSRG.RegenHealInterval>
+  <CSRG.RegenHealIntervalTip>每次再生脈衝之間的間隔</CSRG.RegenHealIntervalTip>
+  <CSRG.RegenHealAmount>治療池</CSRG.RegenHealAmount>
+  <CSRG.RegenHealAmountTip>每脈衝總治療預算</CSRG.RegenHealAmountTip>
+  <CSRG.RegenSeverityPercent>新生肢體嚴重度 %</CSRG.RegenSeverityPercent>
+  <CSRG.RegenSeverityPercentTip>再生肢體傷口的初始嚴重度，以最大血量百分比表示</CSRG.RegenSeverityPercentTip>
+  <CSRG.RegenTissueDecayPerDay>組織衰減/日</CSRG.RegenTissueDecayPerDay>
+  <CSRG.RegenTissueDecayPerDayTip>再生組織每日自然成熟的速度</CSRG.RegenTissueDecayPerDayTip>  <CSRG.BurstSettings>爆發再生設置</CSRG.BurstSettings>
+  <CSRG.BurstEnabled>啟用爆發再生</CSRG.BurstEnabled>
+  <CSRG.BurstThreshold>爆發閾值</CSRG.BurstThreshold>
+  <CSRG.BurstThresholdTip>低於此總體健康百分比時觸發爆發再生</CSRG.BurstThresholdTip>
+  <CSRG.BurstInterval>爆發間隔 (ticks)</CSRG.BurstInterval>
+  <CSRG.BurstIntervalTip>爆發期間每次癒合脈衝之間的間隔</CSRG.BurstIntervalTip>
+  <CSRG.BurstDuration>爆發持續 (ticks)</CSRG.BurstDuration>
+  <CSRG.BurstDurationTip>爆發再生狀態的總持續時間</CSRG.BurstDurationTip>
+  <CSRG.BurstCooldown>爆發冷卻 (days)</CSRG.BurstCooldown>
+  <CSRG.BurstCooldownTip>爆發結束後觸發再次爆發所需的天數</CSRG.BurstCooldownTip>
+  <CSRG.BurstPoolMultiplier>爆發池倍率</CSRG.BurstPoolMultiplier>
+  <CSRG.BurstPoolMultiplierTip>爆發狀態期間治療池的倍率</CSRG.BurstPoolMultiplierTip>
+  <CSRG.LongTermRegen>長期再生</CSRG.LongTermRegen>
+  <CSRG.ScarInterval>疤痕間隔 (days)</CSRG.ScarInterval>
+  <CSRG.ScarIntervalTip>永久傷疤癒合嘗試之間的天數間隔</CSRG.ScarIntervalTip>
+  <CSRG.LimbInterval>肢體間隔 (days)</CSRG.LimbInterval>
+  <CSRG.LimbIntervalTip>缺失肢體再生嘗試之間的天數間隔</CSRG.LimbIntervalTip>
+</LanguageData>

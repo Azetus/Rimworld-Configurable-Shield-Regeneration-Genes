@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HediffDef>
+        <defName>CSRG_RegenerationBurst</defName>
+        <label>regeneration burst</label>
+        <description>The regeneration gene is in burst mode, rapidly healing fresh wounds. This will be followed by a cooldown period.</description>
+        <hediffClass>CSRG_ConfigurableShieldRegenerationGenes.Hediffs.Hediff_RegenerationBurst</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <minSeverity>0.0</minSeverity>
+                <label>burst active</label>
+                <becomeVisible>true</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>0.5</minSeverity>
+                <label>cooldown</label>
+                <becomeVisible>true</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>

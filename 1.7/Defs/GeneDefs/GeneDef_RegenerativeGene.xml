@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GeneDef>
+    <defName>CSRG_RegenerativeGene</defName>
+    <label>Nanomechanical regeneration</label>
+    <description>Carriers of this gene possess archite nanomachines that constantly repair cellular damage. These nanomachines stop bleeding, heal wounds, restore blood loss, remove scars and chronic illnesses, and can even regrow missing limbs over time.</description>
+    <geneClass>CSRG_ConfigurableShieldRegenerationGenes.Genes.CSRG_RegenerativeGene</geneClass>
+    <displayCategory>Archite</displayCategory>
+    <preventPermanentWounds>true</preventPermanentWounds>
+    <biostatCpx>4</biostatCpx>
+    <biostatMet>-2</biostatMet>
+    <biostatArc>2</biostatArc>
+    <canGenerateInGeneSet>true</canGenerateInGeneSet>
+    <selectionWeight>1</selectionWeight>
+    <iconPath>CSRG_RegenerativeGene_Icon</iconPath>
+  </GeneDef>
+</Defs>

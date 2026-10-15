@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>CSRG_RegeneratingInjury</defName>
+    <label>regenerating tissue</label>
+    <description>Newly grown tissue that is still developing. It will mature and regain full functionality over time.</description>
+    <hediffClass>CSRG_ConfigurableShieldRegenerationGenes.Hediffs.Hediff_RegeneratingInjury</hediffClass>
+    <isBad>true</isBad>
+    <stages>
+      <li>
+        <minSeverity>0.0</minSeverity>
+        <partEfficiencyOffset>0.0</partEfficiencyOffset>
+        <label>fully restored</label>
+      </li>
+      <li>
+        <minSeverity>0.2</minSeverity>
+        <partEfficiencyOffset>-0.2</partEfficiencyOffset>
+        <label>nearly healed</label>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <partEfficiencyOffset>-0.4</partEfficiencyOffset>
+        <label>maturing</label>
+      </li>
+      <li>
+        <minSeverity>0.6</minSeverity>
+        <partEfficiencyOffset>-0.6</partEfficiencyOffset>
+        <label>developing</label>
+      </li>
+      <li>
+        <minSeverity>0.8</minSeverity>
+        <partEfficiencyOffset>-0.8</partEfficiencyOffset>
+        <label>nascent</label>
+      </li>
+    </stages>
+    <comps>
+      <li Class="CSRG_ConfigurableShieldRegenerationGenes.Hediffs.HediffCompProperties_RegeneratingTissueDecay" />
+    </comps>
+  </HediffDef>
+</Defs>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <CSRG_ModName>Configurable Shield &amp; Regeneration Genes</CSRG_ModName>
+  <CSRG.ShieldSettings>护盾设置</CSRG.ShieldSettings>
+  <CSRG.ShieldMaxEnergy>最大能量</CSRG.ShieldMaxEnergy>
+  <CSRG.ShieldMaxEnergyTip>护盾能量上限</CSRG.ShieldMaxEnergyTip>
+  <CSRG.ShieldRegenRate>恢复量</CSRG.ShieldRegenRate>
+  <CSRG.ShieldRegenRateTip>每Tick恢复的护盾能量</CSRG.ShieldRegenRateTip>
+  <CSRG.ShieldBreakCooldown>破盾冷却 (ticks)</CSRG.ShieldBreakCooldown>
+  <CSRG.ShieldBreakCooldownTip>护盾破碎后开始充能所需等待的Tick数</CSRG.ShieldBreakCooldownTip>
+  <CSRG.ShieldEnergyOnReset>重置能量比例</CSRG.ShieldEnergyOnReset>
+  <CSRG.ShieldEnergyOnResetTip>冷却结束后护盾恢复的能量百分比</CSRG.ShieldEnergyOnResetTip>
+  <CSRG.EnergyLossPerDamage>伤害能耗比</CSRG.EnergyLossPerDamage>
+  <CSRG.EnergyLossPerDamageTip>每点伤害消耗的护盾能量</CSRG.EnergyLossPerDamageTip>
+  <CSRG.ResetToDefaults>恢复默认设置</CSRG.ResetToDefaults>
+</LanguageData>

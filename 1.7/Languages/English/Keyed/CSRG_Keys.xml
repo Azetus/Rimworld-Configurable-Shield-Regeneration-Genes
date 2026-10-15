@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <CSRG.ShieldGeneTip>Gene shield status</CSRG.ShieldGeneTip>
+  <CSRG.ShieldGeneLabel>Nanomechanical shield</CSRG.ShieldGeneLabel>
+  <CSRG.RegenerativeGeneLabel>Nanomechanical regeneration</CSRG.RegenerativeGeneLabel>
+  <CSRG.RegenerationSettings>Regeneration Settings</CSRG.RegenerationSettings>
+  <CSRG.RegenHealInterval>Heal Interval (ticks)</CSRG.RegenHealInterval>
+  <CSRG.RegenHealIntervalTip>Ticks between each regeneration pulse</CSRG.RegenHealIntervalTip>
+  <CSRG.RegenHealAmount>Heal Pool</CSRG.RegenHealAmount>
+  <CSRG.RegenHealAmountTip>Total HP budget per regeneration pulse</CSRG.RegenHealAmountTip>
+  <CSRG.RegenSeverityPercent>Newborn Severity %</CSRG.RegenSeverityPercent>
+  <CSRG.RegenSeverityPercentTip>Initial severity of regenerated limb wounds as percentage of max health</CSRG.RegenSeverityPercentTip>
+  <CSRG.RegenTissueDecayPerDay>Tissue Decay/Day</CSRG.RegenTissueDecayPerDay>
+  <CSRG.RegenTissueDecayPerDayTip>Rate at which regenerating tissue matures naturally per day</CSRG.RegenTissueDecayPerDayTip>  <CSRG.BurstSettings>Burst Regeneration Settings</CSRG.BurstSettings>
+  <CSRG.BurstEnabled>Enable Burst</CSRG.BurstEnabled>
+  <CSRG.BurstThreshold>Burst Threshold</CSRG.BurstThreshold>
+  <CSRG.BurstThresholdTip>Summary health percentage below which burst triggers</CSRG.BurstThresholdTip>
+  <CSRG.BurstInterval>Burst Interval (ticks)</CSRG.BurstInterval>
+  <CSRG.BurstIntervalTip>Ticks between each healing pulse during burst</CSRG.BurstIntervalTip>
+  <CSRG.BurstDuration>Burst Duration (ticks)</CSRG.BurstDuration>
+  <CSRG.BurstDurationTip>Total duration of the burst regeneration state</CSRG.BurstDurationTip>
+  <CSRG.BurstCooldown>Burst Cooldown (days)</CSRG.BurstCooldown>
+  <CSRG.BurstCooldownTip>Days before burst can be triggered again</CSRG.BurstCooldownTip>
+  <CSRG.BurstPoolMultiplier>Burst Pool Multiplier</CSRG.BurstPoolMultiplier>
+  <CSRG.BurstPoolMultiplierTip>Heal pool multiplier applied during burst state</CSRG.BurstPoolMultiplierTip>
+  <CSRG.LongTermRegen>Long-Term Regeneration</CSRG.LongTermRegen>
+  <CSRG.ScarInterval>Scar Interval (days)</CSRG.ScarInterval>
+  <CSRG.ScarIntervalTip>Days between permanent scar healing attempts</CSRG.ScarIntervalTip>
+  <CSRG.LimbInterval>Limb Interval (days)</CSRG.LimbInterval>
+  <CSRG.LimbIntervalTip>Days between missing limb regeneration attempts</CSRG.LimbIntervalTip>
+</LanguageData>
