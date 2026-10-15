@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "Configurable-Shield-Regeneration-Genes/1.0.0": {
+      "Configurable-Shield-Regeneration-Genes/1.2.0": {
         "runtime": {
           "Configurable-Shield-Regeneration-Genes.dll": {}
         }
@@ -14,7 +14,7 @@
     }
   },
   "libraries": {
-    "Configurable-Shield-Regeneration-Genes/1.0.0": {
+    "Configurable-Shield-Regeneration-Genes/1.2.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
